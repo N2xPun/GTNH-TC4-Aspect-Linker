@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dqp4luaph5q03"]
+
+[node name="AspectChain" type="HBoxContainer" unique_id=552887834]
+custom_minimum_size = Vector2(0, 64)
