@@ -24,6 +24,16 @@
 [ext_resource type="Texture2D" uid="uid://5g7yofw6nh21" path="res://Images/Aspect Icons/Sano.webp" id="21_pe27u"]
 [ext_resource type="Texture2D" uid="uid://doplaqt4c7uhj" path="res://Images/Aspect Icons/Vinculum.webp" id="22_ne54y"]
 [ext_resource type="Texture2D" uid="uid://d3itqi5g7qkrr" path="res://Images/Aspect Icons/Mortuus.webp" id="23_sssj8"]
+[ext_resource type="Texture2D" uid="uid://cojaefonkjw0o" path="res://Images/Aspect Icons/Limus.webp" id="24_u2c8l"]
+[ext_resource type="Texture2D" uid="uid://md2rggccbla1" path="res://Images/Aspect Icons/Metallum.webp" id="25_g6i1l"]
+[ext_resource type="Texture2D" uid="uid://dcd7j5cuqd1mp" path="res://Images/Aspect Icons/Iter.webp" id="26_reyx0"]
+[ext_resource type="Texture2D" uid="uid://rcac738p0hkr" path="res://Images/Aspect Icons/Herba.webp" id="27_5xnk5"]
+[ext_resource type="Texture2D" uid="uid://c561en3hdljkl" path="res://Images/Aspect Icons/Volatus.webp" id="28_6ngyt"]
+[ext_resource type="Texture2D" uid="uid://c3gyxfvcgudp7" path="res://Images/Aspect Icons/Arbor.webp" id="29_bficn"]
+[ext_resource type="Texture2D" uid="uid://0vhppqjwm5gu" path="res://Images/Aspect Icons/Praecantatio.webp" id="30_m0bfr"]
+[ext_resource type="Texture2D" uid="uid://b4q2cmi1fd5b1" path="res://Images/Aspect Icons/Radio.webp" id="31_0c33q"]
+[ext_resource type="Texture2D" uid="uid://cg4x314nvptso" path="res://Images/Aspect Icons/Bestia.webp" id="32_45d3w"]
+[ext_resource type="Texture2D" uid="uid://dsj7ps3va7u4" path="res://Images/Aspect Icons/Primordium.webp" id="33_og1lj"]
 
 [node name="World" type="Node2D" unique_id=21143700]
 
@@ -121,7 +131,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 20
+item_count = 30
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -182,6 +192,36 @@ popup/item_18/id = 18
 popup/item_19/text = "Mortuus"
 popup/item_19/icon = ExtResource("23_sssj8")
 popup/item_19/id = 19
+popup/item_20/text = "Limus"
+popup/item_20/icon = ExtResource("24_u2c8l")
+popup/item_20/id = 20
+popup/item_21/text = "Metallum"
+popup/item_21/icon = ExtResource("25_g6i1l")
+popup/item_21/id = 21
+popup/item_22/text = "Iter"
+popup/item_22/icon = ExtResource("26_reyx0")
+popup/item_22/id = 22
+popup/item_23/text = "Herba"
+popup/item_23/icon = ExtResource("27_5xnk5")
+popup/item_23/id = 23
+popup/item_24/text = "Volatus"
+popup/item_24/icon = ExtResource("28_6ngyt")
+popup/item_24/id = 24
+popup/item_25/text = "Arbor"
+popup/item_25/icon = ExtResource("29_bficn")
+popup/item_25/id = 25
+popup/item_26/text = "Praecantatio"
+popup/item_26/icon = ExtResource("30_m0bfr")
+popup/item_26/id = 26
+popup/item_27/text = "Radio"
+popup/item_27/icon = ExtResource("31_0c33q")
+popup/item_27/id = 27
+popup/item_28/text = "Bestia"
+popup/item_28/icon = ExtResource("32_45d3w")
+popup/item_28/id = 28
+popup/item_29/text = "Primordium"
+popup/item_29/icon = ExtResource("33_og1lj")
+popup/item_29/id = 29
 
 [node name="ChainLengthControl" type="Control" parent="Control/ParamControl" unique_id=22472858]
 layout_mode = 1
@@ -221,11 +261,31 @@ grow_vertical = 2
 theme = ExtResource("1_xhtwi")
 theme_override_constants/buttons_width = 24
 min_value = 1.0
-max_value = 10.0
+max_value = 6.0
 value = 1.0
 rounded = true
 alignment = 2
 update_on_text_changed = true
+
+[node name="OptionButton" type="OptionButton" parent="Control/ParamControl/ChainLengthControl" unique_id=1231056172]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 34.0
+offset_right = 80.0
+offset_bottom = 82.0
+grow_horizontal = 2
+grow_vertical = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Unique"
+popup/item_0/id = 0
+popup/item_1/text = "Complexity"
+popup/item_1/id = 1
 
 [node name="EndAspectsControl" type="Control" parent="Control/ParamControl" unique_id=533567620]
 layout_mode = 1
@@ -275,7 +335,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 20
+item_count = 30
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -336,6 +396,36 @@ popup/item_18/id = 18
 popup/item_19/text = "Mortuus"
 popup/item_19/icon = ExtResource("23_sssj8")
 popup/item_19/id = 19
+popup/item_20/text = "Limus"
+popup/item_20/icon = ExtResource("24_u2c8l")
+popup/item_20/id = 20
+popup/item_21/text = "Metallum"
+popup/item_21/icon = ExtResource("25_g6i1l")
+popup/item_21/id = 21
+popup/item_22/text = "Iter"
+popup/item_22/icon = ExtResource("26_reyx0")
+popup/item_22/id = 22
+popup/item_23/text = "Herba"
+popup/item_23/icon = ExtResource("27_5xnk5")
+popup/item_23/id = 23
+popup/item_24/text = "Volatus"
+popup/item_24/icon = ExtResource("28_6ngyt")
+popup/item_24/id = 24
+popup/item_25/text = "Arbor"
+popup/item_25/icon = ExtResource("29_bficn")
+popup/item_25/id = 25
+popup/item_26/text = "Praecantatio"
+popup/item_26/icon = ExtResource("30_m0bfr")
+popup/item_26/id = 26
+popup/item_27/text = "Radio"
+popup/item_27/icon = ExtResource("31_0c33q")
+popup/item_27/id = 27
+popup/item_28/text = "Bestia"
+popup/item_28/icon = ExtResource("32_45d3w")
+popup/item_28/id = 28
+popup/item_29/text = "Primordium"
+popup/item_29/icon = ExtResource("33_og1lj")
+popup/item_29/id = 29
 
 [node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("ChainsDisplay", "Starts", "Ends", "LengthSelector")]
 layout_mode = 1

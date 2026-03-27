@@ -26,24 +26,34 @@ public partial class ChainsManager : Control
         {
             {Aspectus.Ordo, [Aspectus.Permutatio, Aspectus.Potentia, Aspectus.Vitreus, Aspectus.Motus, Aspectus.Tempus, Aspectus.Sano]}, // primal-1
             {Aspectus.Perditio, [Aspectus.Permutatio, Aspectus.Venenum, Aspectus.Gelum, Aspectus.Vacuos, Aspectus.Vinculum, Aspectus.Mortuus]},
-            {Aspectus.Aqua, [Aspectus.Aqua, Aspectus.Victus, Aspectus.Tempestas]},
+            {Aspectus.Aqua, [Aspectus.Aqua, Aspectus.Victus, Aspectus.Tempestas, Aspectus.Limus]},
             {Aspectus.Ignis, [Aspectus.Potentia, Aspectus.Gelum, Aspectus.Lux]},
-            {Aspectus.Terra, [Aspectus.Vitreus, Aspectus.Victus]},
-            {Aspectus.Aer, [Aspectus.Motus, Aspectus.Vacuos, Aspectus.Tempestas, Aspectus.Lux]},
+            {Aspectus.Terra, [Aspectus.Vitreus, Aspectus.Victus, Aspectus.Metallum, Aspectus.Iter, Aspectus.Herba]},
+            {Aspectus.Aer, [Aspectus.Motus, Aspectus.Vacuos, Aspectus.Tempestas, Aspectus.Lux, Aspectus.Volatus, Aspectus.Arbor]},
             {Aspectus.Permutatio, [Aspectus.Ordo, Aspectus.Perditio]}, // compound-2
-            {Aspectus.Potentia, [Aspectus.Ordo, Aspectus.Ignis]},
-            {Aspectus.Vitreus, [Aspectus.Ordo, Aspectus.Terra]},
-            {Aspectus.Motus, [Aspectus.Ordo, Aspectus.Aer, Aspectus.Vinculum]},
+            {Aspectus.Potentia, [Aspectus.Ordo, Aspectus.Ignis, Aspectus.Praecantatio, Aspectus.Radio]},
+            {Aspectus.Vitreus, [Aspectus.Ordo, Aspectus.Terra, Aspectus.Metallum]},
+            {Aspectus.Motus, [Aspectus.Ordo, Aspectus.Aer, Aspectus.Vinculum, Aspectus.Iter, Aspectus.Volatus, Aspectus.Bestia]},
             {Aspectus.Venenum, [Aspectus.Perditio, Aspectus.Aqua]},
             {Aspectus.Gelum, [Aspectus.Perditio, Aspectus.Ignis]},
-            {Aspectus.Vacuos, [Aspectus.Perditio, Aspectus.Aer, Aspectus.Tempus]},
-            {Aspectus.Victus, [Aspectus.Aqua, Aspectus.Terra, Aspectus.Sano, Aspectus.Mortuus]},
+            {Aspectus.Vacuos, [Aspectus.Perditio, Aspectus.Aer, Aspectus.Tempus, Aspectus.Praecantatio]},
+            {Aspectus.Victus, [Aspectus.Aqua, Aspectus.Terra, Aspectus.Sano, Aspectus.Mortuus, Aspectus.Limus, Aspectus.Herba, Aspectus.Bestia]},
             {Aspectus.Tempestas, [Aspectus.Aqua, Aspectus.Aer]},
-            {Aspectus.Lux, [Aspectus.Ignis, Aspectus.Aer]},
+            {Aspectus.Lux, [Aspectus.Ignis, Aspectus.Aer, Aspectus.Radio]},
             {Aspectus.Tempus, [Aspectus.Ordo, Aspectus.Vacuos]}, // compound-3
             {Aspectus.Sano, [Aspectus.Ordo, Aspectus.Victus]},
             {Aspectus.Vinculum, [Aspectus.Perditio, Aspectus.Motus]},
             {Aspectus.Mortuus, [Aspectus.Perditio, Aspectus.Victus]},
+            {Aspectus.Limus, [Aspectus.Aqua, Aspectus.Victus]},
+            {Aspectus.Metallum, [Aspectus.Terra, Aspectus.Vitreus]},
+            {Aspectus.Iter, [Aspectus.Terra, Aspectus.Motus]},
+            {Aspectus.Herba, [Aspectus.Terra, Aspectus.Victus, Aspectus.Arbor]},
+            {Aspectus.Volatus, [Aspectus.Aer, Aspectus.Motus]},
+            {Aspectus.Arbor, [Aspectus.Aer, Aspectus.Herba]},
+            {Aspectus.Praecantatio, [Aspectus.Potentia, Aspectus.Vacuos]},
+            {Aspectus.Radio, [Aspectus.Potentia, Aspectus.Lux]},
+            {Aspectus.Bestia, [Aspectus.Motus, Aspectus.Victus]},
+            {Aspectus.Primordium, [Aspectus.Motus, Aspectus.Vacuos]},
         }  
     };
 
@@ -94,41 +104,32 @@ public partial class ChainsManager : Control
 
     private List<List<Aspectus>> CalculateChains(HashSet<Aspectus> beginnings, HashSet<Aspectus> endings, int length)
     {
-        List<List<Aspectus>> chains = [];
         _allChains = [];
 
         foreach (Aspectus begin in beginnings)
         {
-            GD.Print($"Starting as {begin}");
-            ChainRecurse([begin], length + 1);
+            ChainRecurse([begin], length + 1, endings);
         }
-
-        foreach (List<Aspectus> chain in _allChains)
-        {
-            if (endings.Contains(chain[^1]))
-            {
-                chains.Add(chain);
-            }
-        }
-        return chains;
+        return _allChains;
     }
 
     private List<List<Aspectus>> _allChains = [];
-    private void ChainRecurse(List<Aspectus> chain, int remlength)
+    private void ChainRecurse(List<Aspectus> chain, int remlength, HashSet<Aspectus> targ)
     {
         if (remlength == 0)
         {
-            GD.Print("Ending this chain");
-            _allChains.Add(chain);
+            if (targ.Contains(chain[^1]))
+            {
+                _allChains.Add(chain);    
+            }
         }
         else
         {
             foreach(Aspectus end in _aspg.GetEdges(chain[^1]))
             {
-                GD.Print($"Continuing as {end}");
                 List<Aspectus> augChain = [.. chain];
                 augChain.Add(end);
-                ChainRecurse(augChain, remlength - 1);
+                ChainRecurse(augChain, remlength - 1, targ);
             }
         }
     }

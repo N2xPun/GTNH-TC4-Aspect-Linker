@@ -24,10 +24,20 @@ namespace SuperLibrary
             {Aspectus.Victus, "res://Images/Aspect Icons/Victus.webp"},
             {Aspectus.Tempestas, "res://Images/Aspect Icons/Tempestas.webp"},
             {Aspectus.Lux, "res://Images/Aspect Icons/Lux.webp"},
-            {Aspectus.Tempus, "res://Images/Aspect Icons/Tempus.webp"}, // coumpound-3
+            {Aspectus.Tempus, "res://Images/Aspect Icons/Tempus.webp"}, // compound-3
             {Aspectus.Sano, "res://Images/Aspect Icons/Sano.webp"},
             {Aspectus.Vinculum, "res://Images/Aspect Icons/Vinculum.webp"},
             {Aspectus.Mortuus, "res://Images/Aspect Icons/Mortuus.webp"},
+            {Aspectus.Limus, "res://Images/Aspect Icons/Limus.webp"},
+            {Aspectus.Metallum, "res://Images/Aspect Icons/Metallum.webp"},
+            {Aspectus.Iter, "res://Images/Aspect Icons/Iter.webp"},
+            {Aspectus.Herba, "res://Images/Aspect Icons/Herba.webp"},
+            {Aspectus.Volatus, "res://Images/Aspect Icons/Volatus.webp"},
+            {Aspectus.Arbor, "res://Images/Aspect Icons/Arbor.webp"}, // compound-4
+            {Aspectus.Praecantatio, "res://Images/Aspect Icons/Praecantatio.webp"},
+            {Aspectus.Radio, "res://Images/Aspect Icons/Radio.webp"},
+            {Aspectus.Bestia, "res://Images/Aspect Icons/Bestia.webp"},
+            {Aspectus.Primordium, "res://Images/Aspect Icons/Primordium.webp"},
         };
     }
 }

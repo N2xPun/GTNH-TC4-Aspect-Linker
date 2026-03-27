@@ -18,9 +18,19 @@ namespace GTNHTC
         Victus,
         Tempestas,
         Lux,
-        Tempus, // coumpound-3
+        Tempus, // compound-3
         Sano,
         Vinculum,
         Mortuus,
+        Limus,
+        Metallum,
+        Iter,
+        Herba,
+        Volatus,
+        Arbor, // compound-4
+        Praecantatio,
+        Radio,
+        Bestia,
+        Primordium,
     }
 }
