@@ -19,6 +19,11 @@
 [ext_resource type="Texture2D" uid="uid://dsnpwcxascamc" path="res://Images/Aspect Icons/Vacuos.webp" id="16_uq86q"]
 [ext_resource type="Texture2D" uid="uid://b8fj5iwgvnll7" path="res://Images/Aspect Icons/Victus.webp" id="17_aa3qu"]
 [ext_resource type="Texture2D" uid="uid://pnjhrb2io8jk" path="res://Images/Aspect Icons/Tempestas.webp" id="18_bf81u"]
+[ext_resource type="Texture2D" uid="uid://5nspsul6dnkg" path="res://Images/Aspect Icons/Lux.webp" id="19_iab34"]
+[ext_resource type="Texture2D" uid="uid://dqua5inxvyach" path="res://Images/Aspect Icons/Tempus.webp" id="20_58uq4"]
+[ext_resource type="Texture2D" uid="uid://5g7yofw6nh21" path="res://Images/Aspect Icons/Sano.webp" id="21_pe27u"]
+[ext_resource type="Texture2D" uid="uid://doplaqt4c7uhj" path="res://Images/Aspect Icons/Vinculum.webp" id="22_ne54y"]
+[ext_resource type="Texture2D" uid="uid://d3itqi5g7qkrr" path="res://Images/Aspect Icons/Mortuus.webp" id="23_sssj8"]
 
 [node name="World" type="Node2D" unique_id=21143700]
 
@@ -116,7 +121,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 15
+item_count = 20
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -162,6 +167,21 @@ popup/item_13/id = 13
 popup/item_14/text = "Tempestas"
 popup/item_14/icon = ExtResource("18_bf81u")
 popup/item_14/id = 14
+popup/item_15/text = "Lux"
+popup/item_15/icon = ExtResource("19_iab34")
+popup/item_15/id = 15
+popup/item_16/text = "Tempus"
+popup/item_16/icon = ExtResource("20_58uq4")
+popup/item_16/id = 16
+popup/item_17/text = "Sano"
+popup/item_17/icon = ExtResource("21_pe27u")
+popup/item_17/id = 17
+popup/item_18/text = "Vinculum"
+popup/item_18/icon = ExtResource("22_ne54y")
+popup/item_18/id = 18
+popup/item_19/text = "Mortuus"
+popup/item_19/icon = ExtResource("23_sssj8")
+popup/item_19/id = 19
 
 [node name="ChainLengthControl" type="Control" parent="Control/ParamControl" unique_id=22472858]
 layout_mode = 1
@@ -255,7 +275,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 15
+item_count = 20
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -301,6 +321,21 @@ popup/item_13/id = 13
 popup/item_14/text = "Tempestas"
 popup/item_14/icon = ExtResource("18_bf81u")
 popup/item_14/id = 14
+popup/item_15/text = "Lux"
+popup/item_15/icon = ExtResource("19_iab34")
+popup/item_15/id = 15
+popup/item_16/text = "Tempus"
+popup/item_16/icon = ExtResource("20_58uq4")
+popup/item_16/id = 16
+popup/item_17/text = "Sano"
+popup/item_17/icon = ExtResource("21_pe27u")
+popup/item_17/id = 17
+popup/item_18/text = "Vinculum"
+popup/item_18/icon = ExtResource("22_ne54y")
+popup/item_18/id = 18
+popup/item_19/text = "Mortuus"
+popup/item_19/icon = ExtResource("23_sssj8")
+popup/item_19/id = 19
 
 [node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("ChainsDisplay", "Starts", "Ends", "LengthSelector")]
 layout_mode = 1
