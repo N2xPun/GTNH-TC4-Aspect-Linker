@@ -34,6 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://b4q2cmi1fd5b1" path="res://Images/Aspect Icons/Radio.webp" id="31_0c33q"]
 [ext_resource type="Texture2D" uid="uid://cg4x314nvptso" path="res://Images/Aspect Icons/Bestia.webp" id="32_45d3w"]
 [ext_resource type="Texture2D" uid="uid://dsj7ps3va7u4" path="res://Images/Aspect Icons/Primordium.webp" id="33_og1lj"]
+[ext_resource type="Script" uid="uid://butj2jif6a4a3" path="res://Scripts/Paginator.cs" id="35_m0bfr"]
 
 [node name="World" type="Node2D" unique_id=21143700]
 
@@ -261,7 +262,7 @@ grow_vertical = 2
 theme = ExtResource("1_xhtwi")
 theme_override_constants/buttons_width = 24
 min_value = 1.0
-max_value = 6.0
+max_value = 10.0
 value = 1.0
 rounded = true
 alignment = 2
@@ -427,7 +428,7 @@ popup/item_29/text = "Primordium"
 popup/item_29/icon = ExtResource("33_og1lj")
 popup/item_29/id = 29
 
-[node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("ChainsDisplay", "Starts", "Ends", "LengthSelector")]
+[node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("ChainsDisplay", "Starts", "Ends", "LengthSelector", "Paginator")]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -442,10 +443,11 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_xhtwi")
 script = ExtResource("6_aan6j")
-ChainsDisplay = NodePath("ScrollContainer/VBox")
+ChainsDisplay = NodePath("VBox")
 Starts = NodePath("../ParamControl/StartAspectsControl/ScrollContainer/HFlow")
 Ends = NodePath("../ParamControl/EndAspectsControl/ScrollContainer/HFlow")
 LengthSelector = NodePath("../ParamControl/ChainLengthControl/ChainLengthSelector")
+Paginator = NodePath("Paginator")
 
 [node name="TempBackground3" type="ColorRect" parent="Control/ChainsControl" unique_id=37939028]
 layout_mode = 1
@@ -468,20 +470,74 @@ grow_vertical = 2
 theme = ExtResource("1_xhtwi")
 color = Color(0.36969033, 0.23906943, 0.63252646, 1)
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Control/ChainsControl" unique_id=209683383]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -515.0
-offset_top = -340.0
-offset_right = 515.0
-offset_bottom = 340.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBox" type="VBoxContainer" parent="Control/ChainsControl/ScrollContainer" unique_id=1282061538]
-layout_mode = 2
+[node name="VBox" type="VBoxContainer" parent="Control/ChainsControl" unique_id=1282061538]
+custom_minimum_size = Vector2(1030, 646)
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 10.0
+offset_bottom = 10.0
 theme = ExtResource("1_xhtwi")
+theme_override_constants/separation = 7
+
+[node name="Paginator" type="HBoxContainer" parent="Control/ChainsControl" unique_id=1687374050 node_paths=PackedStringArray("ChainsManager", "PageNumberDisplay", "TotalPagesDisplay", "Leftmost", "Left", "Right", "Rightmost")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -128.0
+offset_top = -42.0
+offset_right = 128.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+script = ExtResource("35_m0bfr")
+ChainsManager = NodePath("..")
+PageNumberDisplay = NodePath("Pagenumber")
+TotalPagesDisplay = NodePath("TotalPages")
+Leftmost = NodePath("Leftmost")
+Left = NodePath("Left")
+Right = NodePath("Right")
+Rightmost = NodePath("Rightmost")
+
+[node name="Leftmost" type="Button" parent="Control/ChainsControl/Paginator" unique_id=1469514868]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "<<"
+icon_alignment = 1
+
+[node name="Left" type="Button" parent="Control/ChainsControl/Paginator" unique_id=148278602]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "<"
+icon_alignment = 1
+
+[node name="Pagenumber" type="LineEdit" parent="Control/ChainsControl/Paginator" unique_id=387372620]
+layout_mode = 2
+theme_override_font_sizes/font_size = 21
+text = "1"
+alignment = 1
+
+[node name="Right" type="Button" parent="Control/ChainsControl/Paginator" unique_id=774395500]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = ">
+"
+icon_alignment = 1
+
+[node name="Rightmost" type="Button" parent="Control/ChainsControl/Paginator" unique_id=901201738]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = ">>"
+icon_alignment = 1
+
+[node name="TotalPages" type="Label" parent="Control/ChainsControl/Paginator" unique_id=1687572161]
+layout_mode = 2
+text = "1 Pages"

@@ -1,6 +1,7 @@
 using Godot;
 using GTNHTC;
 using SuperLibrary;
+using System;
 using System.Collections.Generic;
 
 public partial class ChainsManager : Control
@@ -12,6 +13,7 @@ public partial class ChainsManager : Control
     [Export] private DestinationManager Starts { get; set; }
     [Export] private DestinationManager Ends { get; set; }
     [Export] private SpinBox LengthSelector { get; set; }
+    [Export] private Paginator Paginator { get; set; }
 
     private PackedScene _aspectChainPckS;
     private PackedScene _aspectControlPckS;
@@ -33,10 +35,10 @@ public partial class ChainsManager : Control
             {Aspectus.Permutatio, [Aspectus.Ordo, Aspectus.Perditio]}, // compound-2
             {Aspectus.Potentia, [Aspectus.Ordo, Aspectus.Ignis, Aspectus.Praecantatio, Aspectus.Radio]},
             {Aspectus.Vitreus, [Aspectus.Ordo, Aspectus.Terra, Aspectus.Metallum]},
-            {Aspectus.Motus, [Aspectus.Ordo, Aspectus.Aer, Aspectus.Vinculum, Aspectus.Iter, Aspectus.Volatus, Aspectus.Bestia]},
+            {Aspectus.Motus, [Aspectus.Ordo, Aspectus.Aer, Aspectus.Vinculum, Aspectus.Iter, Aspectus.Volatus, Aspectus.Bestia, Aspectus.Primordium]},
             {Aspectus.Venenum, [Aspectus.Perditio, Aspectus.Aqua]},
             {Aspectus.Gelum, [Aspectus.Perditio, Aspectus.Ignis]},
-            {Aspectus.Vacuos, [Aspectus.Perditio, Aspectus.Aer, Aspectus.Tempus, Aspectus.Praecantatio]},
+            {Aspectus.Vacuos, [Aspectus.Perditio, Aspectus.Aer, Aspectus.Tempus, Aspectus.Praecantatio, Aspectus.Primordium]},
             {Aspectus.Victus, [Aspectus.Aqua, Aspectus.Terra, Aspectus.Sano, Aspectus.Mortuus, Aspectus.Limus, Aspectus.Herba, Aspectus.Bestia]},
             {Aspectus.Tempestas, [Aspectus.Aqua, Aspectus.Aer]},
             {Aspectus.Lux, [Aspectus.Ignis, Aspectus.Aer, Aspectus.Radio]},
@@ -67,25 +69,36 @@ public partial class ChainsManager : Control
         _aspectChainPckS = GD.Load<PackedScene>(AspectChainPath);
         _aspectControlPckS = GD.Load<PackedScene>(AspectControlPath);
 
-        Starts.OnAspectChanged += DisplayChains;
-        Ends.OnAspectChanged += DisplayChains;
-        LengthSelector.ValueChanged += _ => DisplayChains();
+        Starts.OnAspectChanged += UpdateChainsHelper;
+        Ends.OnAspectChanged += UpdateChainsHelper;
+        LengthSelector.ValueChanged += _ => UpdateChainsHelper();
+
+        Paginator.OnChangePage += DisplayChains;
     }
+
+    private void UpdateChainsHelper()
+    {
+        UpdateChains(Starts.Destinations, Ends.Destinations, Mathf.RoundToInt(LengthSelector.Value));
+        Paginator.TotalPages = _chains.Count / 9 + 1;
+        OnUpdateChain.Invoke();
+    }
+
+    public delegate void OnUpdateChainEventHandler();
+    public event OnUpdateChainEventHandler OnUpdateChain;
 
     private void DisplayChains()
     {
-        UpdateChains(Starts.Destinations, Ends.Destinations, Mathf.RoundToInt(LengthSelector.Value));
-
         foreach (Node chain in ChainsDisplay.GetChildren())
         {
             chain.QueueFree();
         }
 
-        foreach (List<Aspectus> chain in _chains)
+        int endingIndex = 9 * Paginator.PageNumber;
+        for (int i = endingIndex - 9; i < endingIndex; i++)
         {
             Control aspectChain = _aspectChainPckS.Instantiate<Control>();
 
-            foreach (Aspectus aspect in chain)
+            foreach (Aspectus aspect in _chains[i])
             {
                 AspectControl aspc = _aspectControlPckS.Instantiate<AspectControl>();
                 aspc.Aspect = aspect;
