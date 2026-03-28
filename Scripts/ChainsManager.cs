@@ -3,6 +3,7 @@ using GTNHTC;
 using SuperLibrary;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class ChainsManager : Control
 {
@@ -49,7 +50,7 @@ public partial class ChainsManager : Control
             {Aspectus.Limus, [Aspectus.Aqua, Aspectus.Victus]},
             {Aspectus.Metallum, [Aspectus.Terra, Aspectus.Vitreus]},
             {Aspectus.Iter, [Aspectus.Terra, Aspectus.Motus]},
-            {Aspectus.Herba, [Aspectus.Terra, Aspectus.Victus, Aspectus.Arbor]},
+            {Aspectus.Herba, [Aspectus.Terra, Aspectus.Victus, Aspectus.Arbor]}, // compound-4
             {Aspectus.Volatus, [Aspectus.Aer, Aspectus.Motus]},
             {Aspectus.Arbor, [Aspectus.Aer, Aspectus.Herba]},
             {Aspectus.Praecantatio, [Aspectus.Potentia, Aspectus.Vacuos]},
@@ -76,9 +77,38 @@ public partial class ChainsManager : Control
         Paginator.OnChangePage += DisplayChains;
     }
 
+    private static int ChainUniquenessComparer(List<Aspectus> x, List<Aspectus> y)
+    {
+        Dictionary<Aspectus, int> fx = ChainAspectFrequency(x), fy = ChainAspectFrequency(y);
+        if (fx.Count == fy.Count)
+        {
+            int ux = fx.Count * fx.Values.Max() - fx.Values.Sum();
+            int uy = fy.Count * fy.Values.Max() - fy.Values.Sum();
+            return ux - uy;
+        }
+        else
+        {
+            return fy.Count - fx.Count;
+        }
+    }
+
+    private static Dictionary<Aspectus, int> ChainAspectFrequency(List<Aspectus> x)
+    {
+        Dictionary<Aspectus, int> freq = [];
+        foreach(Aspectus aspect in x)
+        {
+            if (!freq.TryAdd(aspect, 1))
+            {
+                freq[aspect]++;
+            }
+        }
+        return freq;
+    }
+
     private void UpdateChainsHelper()
     {
         UpdateChains(Starts.Destinations, Ends.Destinations, Mathf.RoundToInt(LengthSelector.Value));
+        _chains.Sort(ChainUniquenessComparer);
         Paginator.TotalPages = _chains.Count / 9 + 1;
         OnUpdateChain.Invoke();
     }
