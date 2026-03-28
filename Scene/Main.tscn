@@ -34,7 +34,12 @@
 [ext_resource type="Texture2D" uid="uid://b4q2cmi1fd5b1" path="res://Images/Aspect Icons/Radio.webp" id="31_0c33q"]
 [ext_resource type="Texture2D" uid="uid://cg4x314nvptso" path="res://Images/Aspect Icons/Bestia.webp" id="32_45d3w"]
 [ext_resource type="Texture2D" uid="uid://dsj7ps3va7u4" path="res://Images/Aspect Icons/Primordium.webp" id="33_og1lj"]
+[ext_resource type="Texture2D" uid="uid://our3llsr7ja5" path="res://Images/Aspect Icons/Tenebrae.webp" id="34_rqxs6"]
+[ext_resource type="Texture2D" uid="uid://c8x51x8x4upyu" path="res://Images/Aspect Icons/Fames.webp" id="35_i6ddj"]
 [ext_resource type="Script" uid="uid://butj2jif6a4a3" path="res://Scripts/Paginator.cs" id="35_m0bfr"]
+[ext_resource type="Texture2D" uid="uid://ce1tfhh5alrmm" path="res://Images/Aspect Icons/Vitium.webp" id="36_cjptb"]
+[ext_resource type="Texture2D" uid="uid://x4ovaxh0pc1p" path="res://Images/Aspect Icons/Infernus.webp" id="37_n044j"]
+[ext_resource type="Texture2D" uid="uid://ckihmxq71meer" path="res://Images/Aspect Icons/Auram.webp" id="38_xwk4e"]
 
 [node name="World" type="Node2D" unique_id=21143700]
 
@@ -132,7 +137,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 30
+item_count = 35
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -223,6 +228,21 @@ popup/item_28/id = 28
 popup/item_29/text = "Primordium"
 popup/item_29/icon = ExtResource("33_og1lj")
 popup/item_29/id = 29
+popup/item_30/text = "Tenebrae"
+popup/item_30/icon = ExtResource("34_rqxs6")
+popup/item_30/id = 30
+popup/item_31/text = "Fames"
+popup/item_31/icon = ExtResource("35_i6ddj")
+popup/item_31/id = 31
+popup/item_32/text = "Vitium"
+popup/item_32/icon = ExtResource("36_cjptb")
+popup/item_32/id = 32
+popup/item_33/text = "Infernus"
+popup/item_33/icon = ExtResource("37_n044j")
+popup/item_33/id = 33
+popup/item_34/text = "Auram"
+popup/item_34/icon = ExtResource("38_xwk4e")
+popup/item_34/id = 34
 
 [node name="ChainLengthControl" type="Control" parent="Control/ParamControl" unique_id=22472858]
 layout_mode = 1
@@ -287,7 +307,7 @@ popup/item_0/text = "Unique"
 popup/item_0/id = 0
 popup/item_1/text = "Complexity"
 popup/item_1/id = 1
-popup/item_2/text = "Simple & Unique"
+popup/item_2/text = "Unique & Simple"
 popup/item_2/id = 2
 
 [node name="EndAspectsControl" type="Control" parent="Control/ParamControl" unique_id=533567620]
@@ -338,7 +358,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 30
+item_count = 35
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -429,6 +449,21 @@ popup/item_28/id = 28
 popup/item_29/text = "Primordium"
 popup/item_29/icon = ExtResource("33_og1lj")
 popup/item_29/id = 29
+popup/item_30/text = "Tenebrae"
+popup/item_30/icon = ExtResource("34_rqxs6")
+popup/item_30/id = 30
+popup/item_31/text = "Fames"
+popup/item_31/icon = ExtResource("35_i6ddj")
+popup/item_31/id = 31
+popup/item_32/text = "Vitium"
+popup/item_32/icon = ExtResource("36_cjptb")
+popup/item_32/id = 32
+popup/item_33/text = "Infernus"
+popup/item_33/icon = ExtResource("37_n044j")
+popup/item_33/id = 33
+popup/item_34/text = "Auram"
+popup/item_34/icon = ExtResource("38_xwk4e")
+popup/item_34/id = 34
 
 [node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("Paginator", "ChainsDisplay", "Starts", "Ends", "LengthSelector", "SortSelector")]
 layout_mode = 1

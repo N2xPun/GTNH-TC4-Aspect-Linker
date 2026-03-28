@@ -38,6 +38,11 @@ namespace SuperLibrary
             {Aspectus.Radio, "res://Images/Aspect Icons/Radio.webp"},
             {Aspectus.Bestia, "res://Images/Aspect Icons/Bestia.webp"},
             {Aspectus.Primordium, "res://Images/Aspect Icons/Primordium.webp"},
+            {Aspectus.Tenebrae, "res://Images/Aspect Icons/Tenebrae.webp"}, 
+            {Aspectus.Fames, "res://Images/Aspect Icons/Fames.webp"},
+            {Aspectus.Vitium, "res://Images/Aspect Icons/Vitium.webp"}, // compound-5
+            {Aspectus.Infernus, "res://Images/Aspect Icons/Infernus.webp"},
+            {Aspectus.Auram, "res://Images/Aspect Icons/Auram.webp"},
         };
 
         public static readonly Dictionary<Aspectus, int> AspComplexity = new()
@@ -72,6 +77,11 @@ namespace SuperLibrary
             {Aspectus.Radio, 4},
             {Aspectus.Bestia, 4},
             {Aspectus.Primordium, 4},
+            {Aspectus.Tenebrae, 4}, 
+            {Aspectus.Fames, 4},
+            {Aspectus.Vitium, 5}, // compound-5
+            {Aspectus.Infernus, 5},
+            {Aspectus.Auram, 5},
         };
     }
 }

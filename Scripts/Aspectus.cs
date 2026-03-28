@@ -32,5 +32,10 @@ namespace GTNHTC
         Radio,
         Bestia,
         Primordium,
+        Tenebrae,
+        Fames,
+        Vitium, // compound-5
+        Infernus,
+        Auram,
     }
 }

@@ -29,21 +29,21 @@ public partial class ChainsManager : Control
         EdgesList =
         {
             {Aspectus.Ordo, [Aspectus.Permutatio, Aspectus.Potentia, Aspectus.Vitreus, Aspectus.Motus, Aspectus.Tempus, Aspectus.Sano]}, // primal-1
-            {Aspectus.Perditio, [Aspectus.Permutatio, Aspectus.Venenum, Aspectus.Gelum, Aspectus.Vacuos, Aspectus.Vinculum, Aspectus.Mortuus]},
-            {Aspectus.Aqua, [Aspectus.Aqua, Aspectus.Victus, Aspectus.Tempestas, Aspectus.Limus]},
-            {Aspectus.Ignis, [Aspectus.Potentia, Aspectus.Gelum, Aspectus.Lux]},
+            {Aspectus.Perditio, [Aspectus.Permutatio, Aspectus.Venenum, Aspectus.Gelum, Aspectus.Vacuos, Aspectus.Vinculum, Aspectus.Mortuus, Aspectus.Vitium]},
+            {Aspectus.Aqua, [Aspectus.Venenum, Aspectus.Victus, Aspectus.Tempestas, Aspectus.Limus]},
+            {Aspectus.Ignis, [Aspectus.Potentia, Aspectus.Gelum, Aspectus.Lux, Aspectus.Infernus]},
             {Aspectus.Terra, [Aspectus.Vitreus, Aspectus.Victus, Aspectus.Metallum, Aspectus.Iter, Aspectus.Herba]},
-            {Aspectus.Aer, [Aspectus.Motus, Aspectus.Vacuos, Aspectus.Tempestas, Aspectus.Lux, Aspectus.Volatus, Aspectus.Arbor]},
+            {Aspectus.Aer, [Aspectus.Motus, Aspectus.Vacuos, Aspectus.Tempestas, Aspectus.Lux, Aspectus.Volatus, Aspectus.Arbor, Aspectus.Auram]},
             {Aspectus.Permutatio, [Aspectus.Ordo, Aspectus.Perditio]}, // compound-2
             {Aspectus.Potentia, [Aspectus.Ordo, Aspectus.Ignis, Aspectus.Praecantatio, Aspectus.Radio]},
             {Aspectus.Vitreus, [Aspectus.Ordo, Aspectus.Terra, Aspectus.Metallum]},
             {Aspectus.Motus, [Aspectus.Ordo, Aspectus.Aer, Aspectus.Vinculum, Aspectus.Iter, Aspectus.Volatus, Aspectus.Bestia, Aspectus.Primordium]},
             {Aspectus.Venenum, [Aspectus.Perditio, Aspectus.Aqua]},
             {Aspectus.Gelum, [Aspectus.Perditio, Aspectus.Ignis]},
-            {Aspectus.Vacuos, [Aspectus.Perditio, Aspectus.Aer, Aspectus.Tempus, Aspectus.Praecantatio, Aspectus.Primordium]},
-            {Aspectus.Victus, [Aspectus.Aqua, Aspectus.Terra, Aspectus.Sano, Aspectus.Mortuus, Aspectus.Limus, Aspectus.Herba, Aspectus.Bestia]},
+            {Aspectus.Vacuos, [Aspectus.Perditio, Aspectus.Aer, Aspectus.Tempus, Aspectus.Praecantatio, Aspectus.Primordium, Aspectus.Tenebrae, Aspectus.Fames]},
+            {Aspectus.Victus, [Aspectus.Aqua, Aspectus.Terra, Aspectus.Sano, Aspectus.Mortuus, Aspectus.Limus, Aspectus.Herba, Aspectus.Bestia, Aspectus.Fames]},
             {Aspectus.Tempestas, [Aspectus.Aqua, Aspectus.Aer]},
-            {Aspectus.Lux, [Aspectus.Ignis, Aspectus.Aer, Aspectus.Radio]},
+            {Aspectus.Lux, [Aspectus.Ignis, Aspectus.Aer, Aspectus.Radio, Aspectus.Tenebrae]},
             {Aspectus.Tempus, [Aspectus.Ordo, Aspectus.Vacuos]}, // compound-3
             {Aspectus.Sano, [Aspectus.Ordo, Aspectus.Victus]},
             {Aspectus.Vinculum, [Aspectus.Perditio, Aspectus.Motus]},
@@ -54,10 +54,15 @@ public partial class ChainsManager : Control
             {Aspectus.Herba, [Aspectus.Terra, Aspectus.Victus, Aspectus.Arbor]}, // compound-4
             {Aspectus.Volatus, [Aspectus.Aer, Aspectus.Motus]},
             {Aspectus.Arbor, [Aspectus.Aer, Aspectus.Herba]},
-            {Aspectus.Praecantatio, [Aspectus.Potentia, Aspectus.Vacuos]},
+            {Aspectus.Praecantatio, [Aspectus.Potentia, Aspectus.Vacuos, Aspectus.Vitium, Aspectus.Infernus, Aspectus.Auram]},
             {Aspectus.Radio, [Aspectus.Potentia, Aspectus.Lux]},
             {Aspectus.Bestia, [Aspectus.Motus, Aspectus.Victus]},
             {Aspectus.Primordium, [Aspectus.Motus, Aspectus.Vacuos]},
+            {Aspectus.Tenebrae, [Aspectus.Vacuos, Aspectus.Lux]},
+            {Aspectus.Fames, [Aspectus.Vacuos, Aspectus.Victus]},
+            {Aspectus.Vitium, [Aspectus.Perditio, Aspectus.Praecantatio]}, // compound-5
+            {Aspectus.Infernus, [Aspectus.Ignis, Aspectus.Praecantatio]},
+            {Aspectus.Auram, [Aspectus.Aer, Aspectus.Praecantatio]},
         }  
     };
 
@@ -167,15 +172,13 @@ public partial class ChainsManager : Control
 
     private void DisplayChains()
     {
-        if (_chains.Count == 0) return;
-
         foreach (Node chain in ChainsDisplay.GetChildren())
         {
             chain.QueueFree();
         }
 
         int endingIndex = 9 * Paginator.PageNumber;
-        for (int i = endingIndex - 9; i < endingIndex; i++)
+        for (int i = endingIndex - 9; i < endingIndex && i < _chains.Count; i++)
         {
             Control aspectChain = _aspectChainPckS.Instantiate<Control>();
 
