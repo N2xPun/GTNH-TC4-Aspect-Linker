@@ -282,11 +282,13 @@ offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 selected = 0
-item_count = 2
+item_count = 3
 popup/item_0/text = "Unique"
 popup/item_0/id = 0
 popup/item_1/text = "Complexity"
 popup/item_1/id = 1
+popup/item_2/text = "Simple & Unique"
+popup/item_2/id = 2
 
 [node name="EndAspectsControl" type="Control" parent="Control/ParamControl" unique_id=533567620]
 layout_mode = 1
@@ -428,7 +430,7 @@ popup/item_29/text = "Primordium"
 popup/item_29/icon = ExtResource("33_og1lj")
 popup/item_29/id = 29
 
-[node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("ChainsDisplay", "Starts", "Ends", "LengthSelector", "Paginator")]
+[node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("Paginator", "ChainsDisplay", "Starts", "Ends", "LengthSelector", "SortSelector")]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -443,11 +445,12 @@ grow_horizontal = 0
 grow_vertical = 2
 theme = ExtResource("1_xhtwi")
 script = ExtResource("6_aan6j")
+Paginator = NodePath("Paginator")
 ChainsDisplay = NodePath("VBox")
 Starts = NodePath("../ParamControl/StartAspectsControl/ScrollContainer/HFlow")
 Ends = NodePath("../ParamControl/EndAspectsControl/ScrollContainer/HFlow")
 LengthSelector = NodePath("../ParamControl/ChainLengthControl/ChainLengthSelector")
-Paginator = NodePath("Paginator")
+SortSelector = NodePath("../ParamControl/ChainLengthControl/OptionButton")
 
 [node name="TempBackground3" type="ColorRect" parent="Control/ChainsControl" unique_id=37939028]
 layout_mode = 1

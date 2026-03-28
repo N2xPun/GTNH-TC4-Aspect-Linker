@@ -10,11 +10,12 @@ public partial class ChainsManager : Control
     private const string AspectChainPath = "res://Prefabs/AspectChain.tscn";
     private const string AspectControlPath = "res://Prefabs/Aspect.tscn";
 
+    [Export] private Paginator Paginator { get; set; }
     [Export] private VBoxContainer ChainsDisplay { get; set; }
     [Export] private DestinationManager Starts { get; set; }
     [Export] private DestinationManager Ends { get; set; }
     [Export] private SpinBox LengthSelector { get; set; }
-    [Export] private Paginator Paginator { get; set; }
+    [Export] private OptionButton SortSelector { get; set; }
 
     private PackedScene _aspectChainPckS;
     private PackedScene _aspectControlPckS;
@@ -75,6 +76,21 @@ public partial class ChainsManager : Control
         LengthSelector.ValueChanged += _ => UpdateChainsHelper();
 
         Paginator.OnChangePage += DisplayChains;
+        SortSelector.ItemSelected += SortChains;
+    }
+
+    private static int ChainComplexComparer(List<Aspectus> x, List<Aspectus> y)
+    {
+        int sumx = 0, sumy = 0;
+        foreach (Aspectus aspx in x)
+        {
+            sumx += AspectLibrary.AspComplexity[aspx];
+        }
+        foreach (Aspectus aspy in y)
+        {
+            sumy += AspectLibrary.AspComplexity[aspy];
+        }
+        return sumy - sumx;
     }
 
     private static int ChainUniquenessComparer(List<Aspectus> x, List<Aspectus> y)
@@ -105,19 +121,54 @@ public partial class ChainsManager : Control
         return freq;
     }
 
+    private static int ChainSimpleUniqueComparer(List<Aspectus> x, List<Aspectus> y)
+    {
+        int ucomp = ChainUniquenessComparer(x, y);
+        if (ucomp == 0)
+        {
+            return ChainComplexComparer(y, x);
+        }
+        else
+        {
+            return ucomp;
+        }
+    }
+
+    private void SortChains(long id)
+    {
+        switch (id)
+        {
+            case 0:
+                _chains.Sort(ChainUniquenessComparer);
+                DisplayChains();
+                break;
+            case 1:
+                _chains.Sort(ChainComplexComparer);
+                DisplayChains();
+                break;
+            case 2:
+                _chains.Sort(ChainSimpleUniqueComparer);
+                DisplayChains();
+                break;
+            default:
+                return;
+        }
+    }
+
     private void UpdateChainsHelper()
     {
         UpdateChains(Starts.Destinations, Ends.Destinations, Mathf.RoundToInt(LengthSelector.Value));
-        _chains.Sort(ChainUniquenessComparer);
+        SortChains(SortSelector.Selected);
         Paginator.TotalPages = _chains.Count / 9 + 1;
         OnUpdateChain.Invoke();
     }
-
     public delegate void OnUpdateChainEventHandler();
     public event OnUpdateChainEventHandler OnUpdateChain;
 
     private void DisplayChains()
     {
+        if (_chains.Count == 0) return;
+
         foreach (Node chain in ChainsDisplay.GetChildren())
         {
             chain.QueueFree();

@@ -39,5 +39,39 @@ namespace SuperLibrary
             {Aspectus.Bestia, "res://Images/Aspect Icons/Bestia.webp"},
             {Aspectus.Primordium, "res://Images/Aspect Icons/Primordium.webp"},
         };
+
+        public static readonly Dictionary<Aspectus, int> AspComplexity = new()
+        {
+            {Aspectus.Ordo, 1},
+            {Aspectus.Perditio, 1},
+            {Aspectus.Aqua, 1},
+            {Aspectus.Ignis, 1},
+            {Aspectus.Terra, 1},
+            {Aspectus.Aer, 1},
+            {Aspectus.Permutatio, 2}, // compound-2
+            {Aspectus.Potentia, 2},
+            {Aspectus.Vitreus, 2},
+            {Aspectus.Motus, 2},
+            {Aspectus.Venenum, 2},
+            {Aspectus.Gelum, 2},
+            {Aspectus.Vacuos, 2},
+            {Aspectus.Victus, 2},
+            {Aspectus.Tempestas, 2},
+            {Aspectus.Lux, 2},
+            {Aspectus.Tempus, 3}, // compound-3
+            {Aspectus.Sano, 3},
+            {Aspectus.Vinculum, 3},
+            {Aspectus.Mortuus, 3},
+            {Aspectus.Limus, 3},
+            {Aspectus.Metallum, 3},
+            {Aspectus.Iter, 3},
+            {Aspectus.Herba, 3},
+            {Aspectus.Volatus, 3},
+            {Aspectus.Arbor, 4}, // compound-4
+            {Aspectus.Praecantatio, 4},
+            {Aspectus.Radio, 4},
+            {Aspectus.Bestia, 4},
+            {Aspectus.Primordium, 4},
+        };
     }
 }
