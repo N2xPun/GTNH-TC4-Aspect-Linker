@@ -37,5 +37,16 @@ namespace GTNHTC
         Vitium, // compound-5
         Infernus,
         Auram,
+        Caelum,
+        Exanimis,
+        Superbia,
+        Spiritus,
+        Cognitio, // compound-6
+        Sensus,
+        Alienis,
+        Gula,
+        Astrum,
+        Magneto,
+        
     }
 }

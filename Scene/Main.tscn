@@ -40,6 +40,16 @@
 [ext_resource type="Texture2D" uid="uid://ce1tfhh5alrmm" path="res://Images/Aspect Icons/Vitium.webp" id="36_cjptb"]
 [ext_resource type="Texture2D" uid="uid://x4ovaxh0pc1p" path="res://Images/Aspect Icons/Infernus.webp" id="37_n044j"]
 [ext_resource type="Texture2D" uid="uid://ckihmxq71meer" path="res://Images/Aspect Icons/Auram.webp" id="38_xwk4e"]
+[ext_resource type="Texture2D" uid="uid://c8v3veu8rb4fe" path="res://Images/Aspect Icons/Caelum.webp" id="39_jupvq"]
+[ext_resource type="Texture2D" uid="uid://406a23lpro3v" path="res://Images/Aspect Icons/Exanimis.webp" id="40_cd6bo"]
+[ext_resource type="Texture2D" uid="uid://bvjtwsq6dow81" path="res://Images/Aspect Icons/Superbia.webp" id="41_clf5q"]
+[ext_resource type="Texture2D" uid="uid://crt263o3i7r3h" path="res://Images/Aspect Icons/Spiritus.webp" id="42_r8yv8"]
+[ext_resource type="Texture2D" uid="uid://b8xn8jj3hthbt" path="res://Images/Aspect Icons/Cognitio.webp" id="43_wd3ae"]
+[ext_resource type="Texture2D" uid="uid://0yd48ncq6s2k" path="res://Images/Aspect Icons/Sensus.webp" id="44_lllnr"]
+[ext_resource type="Texture2D" uid="uid://digechv5qrql1" path="res://Images/Aspect Icons/Alienis.webp" id="45_86elt"]
+[ext_resource type="Texture2D" uid="uid://dby0s5gym6csd" path="res://Images/Aspect Icons/Gula.webp" id="46_6b3h5"]
+[ext_resource type="Texture2D" uid="uid://dkd2dqywv4hgo" path="res://Images/Aspect Icons/Astrum.webp" id="47_qtu3h"]
+[ext_resource type="Texture2D" uid="uid://s2ih8o0qc8mf" path="res://Images/Aspect Icons/Magneto.webp" id="48_ps337"]
 
 [node name="World" type="Node2D" unique_id=21143700]
 
@@ -137,7 +147,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 35
+item_count = 45
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -243,6 +253,36 @@ popup/item_33/id = 33
 popup/item_34/text = "Auram"
 popup/item_34/icon = ExtResource("38_xwk4e")
 popup/item_34/id = 34
+popup/item_35/text = "Caelum"
+popup/item_35/icon = ExtResource("39_jupvq")
+popup/item_35/id = 35
+popup/item_36/text = "Exanimis"
+popup/item_36/icon = ExtResource("40_cd6bo")
+popup/item_36/id = 36
+popup/item_37/text = "Superbia"
+popup/item_37/icon = ExtResource("41_clf5q")
+popup/item_37/id = 37
+popup/item_38/text = "Spiritus"
+popup/item_38/icon = ExtResource("42_r8yv8")
+popup/item_38/id = 38
+popup/item_39/text = "Cognitio"
+popup/item_39/icon = ExtResource("43_wd3ae")
+popup/item_39/id = 39
+popup/item_40/text = "Sensus"
+popup/item_40/icon = ExtResource("44_lllnr")
+popup/item_40/id = 40
+popup/item_41/text = "Alienis"
+popup/item_41/icon = ExtResource("45_86elt")
+popup/item_41/id = 41
+popup/item_42/text = "Gula"
+popup/item_42/icon = ExtResource("46_6b3h5")
+popup/item_42/id = 42
+popup/item_43/text = "Astrum"
+popup/item_43/icon = ExtResource("47_qtu3h")
+popup/item_43/id = 43
+popup/item_44/text = "Magneto"
+popup/item_44/icon = ExtResource("48_ps337")
+popup/item_44/id = 44
 
 [node name="ChainLengthControl" type="Control" parent="Control/ParamControl" unique_id=22472858]
 layout_mode = 1
@@ -358,7 +398,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 35
+item_count = 45
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -464,6 +504,36 @@ popup/item_33/id = 33
 popup/item_34/text = "Auram"
 popup/item_34/icon = ExtResource("38_xwk4e")
 popup/item_34/id = 34
+popup/item_35/text = "Caelum"
+popup/item_35/icon = ExtResource("39_jupvq")
+popup/item_35/id = 35
+popup/item_36/text = "Exanimis"
+popup/item_36/icon = ExtResource("40_cd6bo")
+popup/item_36/id = 36
+popup/item_37/text = "Superbia"
+popup/item_37/icon = ExtResource("41_clf5q")
+popup/item_37/id = 37
+popup/item_38/text = "Spiritus"
+popup/item_38/icon = ExtResource("42_r8yv8")
+popup/item_38/id = 38
+popup/item_39/text = "Cognitio"
+popup/item_39/icon = ExtResource("43_wd3ae")
+popup/item_39/id = 39
+popup/item_40/text = "Sensus"
+popup/item_40/icon = ExtResource("44_lllnr")
+popup/item_40/id = 40
+popup/item_41/text = "Alienis"
+popup/item_41/icon = ExtResource("45_86elt")
+popup/item_41/id = 41
+popup/item_42/text = "Gula"
+popup/item_42/icon = ExtResource("46_6b3h5")
+popup/item_42/id = 42
+popup/item_43/text = "Astrum"
+popup/item_43/icon = ExtResource("47_qtu3h")
+popup/item_43/id = 43
+popup/item_44/text = "Magneto"
+popup/item_44/icon = ExtResource("48_ps337")
+popup/item_44/id = 44
 
 [node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("Paginator", "ChainsDisplay", "Starts", "Ends", "LengthSelector", "SortSelector")]
 layout_mode = 1
