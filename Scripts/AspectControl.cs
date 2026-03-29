@@ -3,7 +3,7 @@ using GTNHTC;
 
 public partial class AspectControl : Control
 {
-    public Aspectus Aspect;
+    public Aspect Aspect;
     public Texture2D IconTex;
     public TextureRect Icon { get; private set; }
 

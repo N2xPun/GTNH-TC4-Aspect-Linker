@@ -1,11 +1,11 @@
 using Godot;
 using GTNHTC;
 
-public partial class AspectDestButton(Aspectus aspect) : Button
+public partial class AspectDestButton(Aspect aspect) : Button
 {
-    public readonly Aspectus Aspect = aspect;
+    public readonly Aspect Aspect = aspect;
 
-    public delegate void OnPressedEventHandler(Aspectus aspect);
+    public delegate void OnPressedEventHandler(Aspect aspect);
     public event OnPressedEventHandler OnPressed;
 
     public override void _Ready()

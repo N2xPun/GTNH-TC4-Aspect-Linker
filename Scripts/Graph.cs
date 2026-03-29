@@ -3,14 +3,14 @@ using GTNHTC;
 
 public class AspectGraph
 {
-    public Dictionary<Aspectus, HashSet<Aspectus>> EdgesList = [];
+    public Dictionary<Aspect, HashSet<Aspect>> EdgesList = [];
 
-    public bool AddAspect(Aspectus aspect)
+    public bool AddAspect(Aspect aspect)
     {
         return EdgesList.TryAdd(aspect, []);
     }
 
-    public bool AddEdge(Aspectus start, Aspectus end)
+    public bool AddEdge(Aspect start, Aspect end)
     {
         if (EdgesList.TryGetValue(start, out var endings) && EdgesList.ContainsKey(end))
         {
@@ -19,7 +19,7 @@ public class AspectGraph
         return false;
     }
 
-    public bool RemoveAspect(Aspectus aspect)
+    public bool RemoveAspect(Aspect aspect)
     {
         foreach ((_, var endings) in EdgesList)
         {
@@ -28,7 +28,7 @@ public class AspectGraph
         return EdgesList.Remove(aspect);
     }
 
-    public bool RemoveEdge(Aspectus start, Aspectus end)
+    public bool RemoveEdge(Aspect start, Aspect end)
     {
         if (EdgesList.TryGetValue(start, out var endings) && EdgesList.ContainsKey(end))
         {
@@ -37,12 +37,12 @@ public class AspectGraph
         return false;
     }
 
-    public HashSet<Aspectus> GetEdges(Aspectus aspect)
+    public HashSet<Aspect> GetEdges(Aspect aspect)
     {
         return EdgesList[aspect];
     }
 
-    public bool TryGetEdges(Aspectus aspect, out HashSet<Aspectus> var)
+    public bool TryGetEdges(Aspect aspect, out HashSet<Aspect> var)
     {
         return EdgesList.TryGetValue(aspect, out var);
     }

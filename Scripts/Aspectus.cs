@@ -1,6 +1,6 @@
 namespace GTNHTC
 {
-    public enum Aspectus
+    public enum Aspect
     {
         Ordo, // primal-1
         Perditio,
@@ -57,5 +57,15 @@ namespace GTNHTC
         Perfodio,
         Luxuria,
         Vesania,
+        Telum, // compound-12
+        Tutamen,
+        Ira, // compound-13
+        Machina,
+        Messis,
+        Gloria,
+        Lucrum, // compound-14
+        Electrum, // compound-15
+        Tabernus,
+        Pannus,
     }
 }

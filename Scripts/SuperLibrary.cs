@@ -6,122 +6,142 @@ namespace SuperLibrary
 {
     public class AspectLibrary
     {
-        public static readonly Dictionary<Aspectus, string> AspTexPathDict = new()
+        public static readonly Dictionary<Aspect, string> AspTexPathDict = new()
         {
-            {Aspectus.Ordo, "res://Images/Aspect Icons/Ordo.webp"}, // primal-1
-            {Aspectus.Perditio, "res://Images/Aspect Icons/Perditio.webp"},
-            {Aspectus.Aqua, "res://Images/Aspect Icons/Aqua.webp"},
-            {Aspectus.Ignis, "res://Images/Aspect Icons/Ignis.webp"},
-            {Aspectus.Terra, "res://Images/Aspect Icons/Terra.webp"},
-            {Aspectus.Aer, "res://Images/Aspect Icons/Aer.webp"},
-            {Aspectus.Permutatio, "res://Images/Aspect Icons/Permutatio.webp"}, // compound-2
-            {Aspectus.Potentia, "res://Images/Aspect Icons/Potentia.webp"},
-            {Aspectus.Vitreus, "res://Images/Aspect Icons/Vitreus.webp"},
-            {Aspectus.Motus, "res://Images/Aspect Icons/Motus.webp"},
-            {Aspectus.Venenum, "res://Images/Aspect Icons/Venenum.webp"},
-            {Aspectus.Gelum, "res://Images/Aspect Icons/Gelum.webp"},
-            {Aspectus.Vacuos, "res://Images/Aspect Icons/Vacuos.webp"},
-            {Aspectus.Victus, "res://Images/Aspect Icons/Victus.webp"},
-            {Aspectus.Tempestas, "res://Images/Aspect Icons/Tempestas.webp"},
-            {Aspectus.Lux, "res://Images/Aspect Icons/Lux.webp"},
-            {Aspectus.Tempus, "res://Images/Aspect Icons/Tempus.webp"}, // compound-3
-            {Aspectus.Sano, "res://Images/Aspect Icons/Sano.webp"},
-            {Aspectus.Vinculum, "res://Images/Aspect Icons/Vinculum.webp"},
-            {Aspectus.Mortuus, "res://Images/Aspect Icons/Mortuus.webp"},
-            {Aspectus.Limus, "res://Images/Aspect Icons/Limus.webp"},
-            {Aspectus.Metallum, "res://Images/Aspect Icons/Metallum.webp"},
-            {Aspectus.Iter, "res://Images/Aspect Icons/Iter.webp"},
-            {Aspectus.Herba, "res://Images/Aspect Icons/Herba.webp"},
-            {Aspectus.Volatus, "res://Images/Aspect Icons/Volatus.webp"},
-            {Aspectus.Arbor, "res://Images/Aspect Icons/Arbor.webp"}, // compound-4
-            {Aspectus.Praecantatio, "res://Images/Aspect Icons/Praecantatio.webp"},
-            {Aspectus.Radio, "res://Images/Aspect Icons/Radio.webp"},
-            {Aspectus.Bestia, "res://Images/Aspect Icons/Bestia.webp"},
-            {Aspectus.Primordium, "res://Images/Aspect Icons/Primordium.webp"},
-            {Aspectus.Tenebrae, "res://Images/Aspect Icons/Tenebrae.webp"}, 
-            {Aspectus.Fames, "res://Images/Aspect Icons/Fames.webp"},
-            {Aspectus.Vitium, "res://Images/Aspect Icons/Vitium.webp"}, // compound-5
-            {Aspectus.Infernus, "res://Images/Aspect Icons/Infernus.webp"},
-            {Aspectus.Auram, "res://Images/Aspect Icons/Auram.webp"},
-            {Aspectus.Caelum, "res://Images/Aspect Icons/Caelum.webp"}, 
-            {Aspectus.Exanimis, "res://Images/Aspect Icons/Exanimis.webp"},
-            {Aspectus.Superbia, "res://Images/Aspect Icons/Superbia.webp"},
-            {Aspectus.Spiritus, "res://Images/Aspect Icons/Spiritus.webp"},
-            {Aspectus.Cognitio, "res://Images/Aspect Icons/Cognitio.webp"}, // compound-6
-            {Aspectus.Sensus, "res://Images/Aspect Icons/Sensus.webp"}, 
-            {Aspectus.Alienis, "res://Images/Aspect Icons/Alienis.webp"},
-            {Aspectus.Gula, "res://Images/Aspect Icons/Gula.webp"},
-            {Aspectus.Astrum, "res://Images/Aspect Icons/Astrum.webp"},
-            {Aspectus.Magneto, "res://Images/Aspect Icons/Magneto.webp"},
-            {Aspectus.Aequalitas, "res://Images/Aspect Icons/Aequalitas.webp"}, // compound-7
-            {Aspectus.Strontio, "res://Images/Aspect Icons/Strontio.webp"}, 
-            {Aspectus.Corpus, "res://Images/Aspect Icons/Corpus.webp"},
-            {Aspectus.Desidia, "res://Images/Aspect Icons/Desidia.webp"}, // compound-8
-            {Aspectus.Humanus, "res://Images/Aspect Icons/Humanus.webp"}, // compound-10
-            {Aspectus.Invidia, "res://Images/Aspect Icons/Invidia.webp"},
-            {Aspectus.Instrumentum, "res://Images/Aspect Icons/Instrumentum.webp"}, // compound-11
-            {Aspectus.Perfodio, "res://Images/Aspect Icons/Perfodio.webp"},
-            {Aspectus.Luxuria, "res://Images/Aspect Icons/Luxuria.webp"},
-            {Aspectus.Vesania, "res://Images/Aspect Icons/Vesania.webp"},
+            {Aspect.Ordo, "res://Images/Aspect Icons/Ordo.webp"}, // primal-1
+            {Aspect.Perditio, "res://Images/Aspect Icons/Perditio.webp"},
+            {Aspect.Aqua, "res://Images/Aspect Icons/Aqua.webp"},
+            {Aspect.Ignis, "res://Images/Aspect Icons/Ignis.webp"},
+            {Aspect.Terra, "res://Images/Aspect Icons/Terra.webp"},
+            {Aspect.Aer, "res://Images/Aspect Icons/Aer.webp"},
+            {Aspect.Permutatio, "res://Images/Aspect Icons/Permutatio.webp"}, // compound-2
+            {Aspect.Potentia, "res://Images/Aspect Icons/Potentia.webp"},
+            {Aspect.Vitreus, "res://Images/Aspect Icons/Vitreus.webp"},
+            {Aspect.Motus, "res://Images/Aspect Icons/Motus.webp"},
+            {Aspect.Venenum, "res://Images/Aspect Icons/Venenum.webp"},
+            {Aspect.Gelum, "res://Images/Aspect Icons/Gelum.webp"},
+            {Aspect.Vacuos, "res://Images/Aspect Icons/Vacuos.webp"},
+            {Aspect.Victus, "res://Images/Aspect Icons/Victus.webp"},
+            {Aspect.Tempestas, "res://Images/Aspect Icons/Tempestas.webp"},
+            {Aspect.Lux, "res://Images/Aspect Icons/Lux.webp"},
+            {Aspect.Tempus, "res://Images/Aspect Icons/Tempus.webp"}, // compound-3
+            {Aspect.Sano, "res://Images/Aspect Icons/Sano.webp"},
+            {Aspect.Vinculum, "res://Images/Aspect Icons/Vinculum.webp"},
+            {Aspect.Mortuus, "res://Images/Aspect Icons/Mortuus.webp"},
+            {Aspect.Limus, "res://Images/Aspect Icons/Limus.webp"},
+            {Aspect.Metallum, "res://Images/Aspect Icons/Metallum.webp"},
+            {Aspect.Iter, "res://Images/Aspect Icons/Iter.webp"},
+            {Aspect.Herba, "res://Images/Aspect Icons/Herba.webp"},
+            {Aspect.Volatus, "res://Images/Aspect Icons/Volatus.webp"},
+            {Aspect.Arbor, "res://Images/Aspect Icons/Arbor.webp"}, // compound-4
+            {Aspect.Praecantatio, "res://Images/Aspect Icons/Praecantatio.webp"},
+            {Aspect.Radio, "res://Images/Aspect Icons/Radio.webp"},
+            {Aspect.Bestia, "res://Images/Aspect Icons/Bestia.webp"},
+            {Aspect.Primordium, "res://Images/Aspect Icons/Primordium.webp"},
+            {Aspect.Tenebrae, "res://Images/Aspect Icons/Tenebrae.webp"}, 
+            {Aspect.Fames, "res://Images/Aspect Icons/Fames.webp"},
+            {Aspect.Vitium, "res://Images/Aspect Icons/Vitium.webp"}, // compound-5
+            {Aspect.Infernus, "res://Images/Aspect Icons/Infernus.webp"},
+            {Aspect.Auram, "res://Images/Aspect Icons/Auram.webp"},
+            {Aspect.Caelum, "res://Images/Aspect Icons/Caelum.webp"}, 
+            {Aspect.Exanimis, "res://Images/Aspect Icons/Exanimis.webp"},
+            {Aspect.Superbia, "res://Images/Aspect Icons/Superbia.webp"},
+            {Aspect.Spiritus, "res://Images/Aspect Icons/Spiritus.webp"},
+            {Aspect.Cognitio, "res://Images/Aspect Icons/Cognitio.webp"}, // compound-6
+            {Aspect.Sensus, "res://Images/Aspect Icons/Sensus.webp"}, 
+            {Aspect.Alienis, "res://Images/Aspect Icons/Alienis.webp"},
+            {Aspect.Gula, "res://Images/Aspect Icons/Gula.webp"},
+            {Aspect.Astrum, "res://Images/Aspect Icons/Astrum.webp"},
+            {Aspect.Magneto, "res://Images/Aspect Icons/Magneto.webp"},
+            {Aspect.Aequalitas, "res://Images/Aspect Icons/Aequalitas.webp"}, // compound-7
+            {Aspect.Strontio, "res://Images/Aspect Icons/Strontio.webp"}, 
+            {Aspect.Corpus, "res://Images/Aspect Icons/Corpus.webp"},
+            {Aspect.Desidia, "res://Images/Aspect Icons/Desidia.webp"}, // compound-8
+            {Aspect.Humanus, "res://Images/Aspect Icons/Humanus.webp"}, // compound-10
+            {Aspect.Invidia, "res://Images/Aspect Icons/Invidia.webp"},
+            {Aspect.Instrumentum, "res://Images/Aspect Icons/Instrumentum.webp"}, // compound-11
+            {Aspect.Perfodio, "res://Images/Aspect Icons/Perfodio.webp"},
+            {Aspect.Luxuria, "res://Images/Aspect Icons/Luxuria.webp"},
+            {Aspect.Vesania, "res://Images/Aspect Icons/Vesania.webp"},
+            {Aspect.Telum, "res://Images/Aspect Icons/Telum.webp"}, // compound-12
+            {Aspect.Tutamen, "res://Images/Aspect Icons/Tutamen.webp"}, 
+            {Aspect.Ira, "res://Images/Aspect Icons/Ira.webp"}, // compound-13
+            {Aspect.Machina, "res://Images/Aspect Icons/Machina.webp"},
+            {Aspect.Messis, "res://Images/Aspect Icons/Messis.webp"},
+            {Aspect.Gloria, "res://Images/Aspect Icons/Gloria.webp"},
+            {Aspect.Lucrum, "res://Images/Aspect Icons/Lucrum.webp"}, // compound-14
+            {Aspect.Electrum, "res://Images/Aspect Icons/Electrum.webp"}, // compound-15
+            {Aspect.Tabernus, "res://Images/Aspect Icons/Tabernus.webp"},
+            {Aspect.Pannus, "res://Images/Aspect Icons/Pannus.webp"},
         };
 
-        public static readonly Dictionary<Aspectus, int> AspComplexity = new()
+        public static readonly Dictionary<Aspect, int> AspComplexity = new()
         {
-            {Aspectus.Ordo, 1},
-            {Aspectus.Perditio, 1},
-            {Aspectus.Aqua, 1},
-            {Aspectus.Ignis, 1},
-            {Aspectus.Terra, 1},
-            {Aspectus.Aer, 1},
-            {Aspectus.Permutatio, 2}, // compound-2
-            {Aspectus.Potentia, 2},
-            {Aspectus.Vitreus, 2},
-            {Aspectus.Motus, 2},
-            {Aspectus.Venenum, 2},
-            {Aspectus.Gelum, 2},
-            {Aspectus.Vacuos, 2},
-            {Aspectus.Victus, 2},
-            {Aspectus.Tempestas, 2},
-            {Aspectus.Lux, 2},
-            {Aspectus.Tempus, 3}, // compound-3
-            {Aspectus.Sano, 3},
-            {Aspectus.Vinculum, 3},
-            {Aspectus.Mortuus, 3},
-            {Aspectus.Limus, 3},
-            {Aspectus.Metallum, 3},
-            {Aspectus.Iter, 3},
-            {Aspectus.Herba, 3},
-            {Aspectus.Volatus, 3},
-            {Aspectus.Arbor, 4}, // compound-4
-            {Aspectus.Praecantatio, 4},
-            {Aspectus.Radio, 4},
-            {Aspectus.Bestia, 4},
-            {Aspectus.Primordium, 4},
-            {Aspectus.Tenebrae, 4}, 
-            {Aspectus.Fames, 4},
-            {Aspectus.Vitium, 5}, // compound-5
-            {Aspectus.Infernus, 5},
-            {Aspectus.Auram, 5},
-            {Aspectus.Caelum, 5}, 
-            {Aspectus.Exanimis, 5},
-            {Aspectus.Superbia, 5},
-            {Aspectus.Spiritus, 5},
-            {Aspectus.Cognitio, 6}, // compound-6
-            {Aspectus.Sensus, 6}, 
-            {Aspectus.Alienis, 6},
-            {Aspectus.Gula, 6},
-            {Aspectus.Astrum, 6},
-            {Aspectus.Magneto, 6}, 
-            {Aspectus.Aequalitas, 7}, // compound-7
-            {Aspectus.Strontio, 7}, 
-            {Aspectus.Corpus, 7},
-            {Aspectus.Desidia, 8}, // compound-8
-            {Aspectus.Humanus, 10}, // compound-10
-            {Aspectus.Invidia, 10},
-            {Aspectus.Instrumentum, 11}, // compound-11
-            {Aspectus.Perfodio, 11},
-            {Aspectus.Luxuria, 11},
-            {Aspectus.Vesania, 11},
+            {Aspect.Ordo, 1},
+            {Aspect.Perditio, 1},
+            {Aspect.Aqua, 1},
+            {Aspect.Ignis, 1},
+            {Aspect.Terra, 1},
+            {Aspect.Aer, 1},
+            {Aspect.Permutatio, 2}, // compound-2
+            {Aspect.Potentia, 2},
+            {Aspect.Vitreus, 2},
+            {Aspect.Motus, 2},
+            {Aspect.Venenum, 2},
+            {Aspect.Gelum, 2},
+            {Aspect.Vacuos, 2},
+            {Aspect.Victus, 2},
+            {Aspect.Tempestas, 2},
+            {Aspect.Lux, 2},
+            {Aspect.Tempus, 3}, // compound-3
+            {Aspect.Sano, 3},
+            {Aspect.Vinculum, 3},
+            {Aspect.Mortuus, 3},
+            {Aspect.Limus, 3},
+            {Aspect.Metallum, 3},
+            {Aspect.Iter, 3},
+            {Aspect.Herba, 3},
+            {Aspect.Volatus, 3},
+            {Aspect.Arbor, 4}, // compound-4
+            {Aspect.Praecantatio, 4},
+            {Aspect.Radio, 4},
+            {Aspect.Bestia, 4},
+            {Aspect.Primordium, 4},
+            {Aspect.Tenebrae, 4}, 
+            {Aspect.Fames, 4},
+            {Aspect.Vitium, 5}, // compound-5
+            {Aspect.Infernus, 5},
+            {Aspect.Auram, 5},
+            {Aspect.Caelum, 5}, 
+            {Aspect.Exanimis, 5},
+            {Aspect.Superbia, 5},
+            {Aspect.Spiritus, 5},
+            {Aspect.Cognitio, 6}, // compound-6
+            {Aspect.Sensus, 6}, 
+            {Aspect.Alienis, 6},
+            {Aspect.Gula, 6},
+            {Aspect.Astrum, 6},
+            {Aspect.Magneto, 6}, 
+            {Aspect.Aequalitas, 7}, // compound-7
+            {Aspect.Strontio, 7}, 
+            {Aspect.Corpus, 7},
+            {Aspect.Desidia, 8}, // compound-8
+            {Aspect.Humanus, 10}, // compound-10
+            {Aspect.Invidia, 10},
+            {Aspect.Instrumentum, 11}, // compound-11
+            {Aspect.Perfodio, 11},
+            {Aspect.Luxuria, 11},
+            {Aspect.Vesania, 11},
+            {Aspect.Telum, 12}, // compound-12
+            {Aspect.Tutamen, 14}, 
+            {Aspect.Ira, 13}, // compound-13
+            {Aspect.Machina, 13},
+            {Aspect.Messis, 13},
+            {Aspect.Gloria, 13},
+            {Aspect.Lucrum, 14}, // compound-14
+            {Aspect.Electrum, 15}, // compound-15
+            {Aspect.Tabernus, 15},
+            {Aspect.Pannus, 15},
         };
     }
 }

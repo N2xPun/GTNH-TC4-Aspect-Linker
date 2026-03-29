@@ -8,15 +8,15 @@ public partial class DestinationManager : HFlowContainer
 	private const string AspectControlPath = "res://Prefabs/Aspect.tscn";
 
 	[Export] private MenuButton _aspectAdder;
-	public HashSet<Aspectus> Destinations { get; } = [];
-	public Dictionary<Aspectus, Control> AspectControls { get; } = [];
+	public HashSet<Aspect> Destinations { get; } = [];
+	public Dictionary<Aspect, Control> AspectControls { get; } = [];
 
-	private Dictionary<Aspectus, Texture2D> AspTex2DDict { get; } = [];
+	private Dictionary<Aspect, Texture2D> AspTex2DDict { get; } = [];
 	private PackedScene _aspectControlPckS;
 
 	public override void _Ready()
 	{
-		foreach ((Aspectus asp, string path) in AspectLibrary.AspTexPathDict)
+		foreach ((Aspect asp, string path) in AspectLibrary.AspTexPathDict)
 		{
 			AspTex2DDict.Add(asp, GD.Load<Texture2D>(path));
 		}
@@ -34,7 +34,7 @@ public partial class DestinationManager : HFlowContainer
 	{
 		if (id is >= 0)
 		{
-			Aspectus asp = (Aspectus)id;
+			Aspect asp = (Aspect)id;
 			if (Destinations.Add(asp))
 			{
 				AspectDestButton button = new(asp){CustomMinimumSize = new(64, 64)};
@@ -54,7 +54,7 @@ public partial class DestinationManager : HFlowContainer
 		}
 	}
 
-	private void RemoveAspect(Aspectus aspect)
+	private void RemoveAspect(Aspect aspect)
 	{
 		if (Destinations.Remove(aspect))
 		{
