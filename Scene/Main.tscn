@@ -102,6 +102,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xhtwi")
+color = Color(0.16400027, 0.15809828, 0.48388606, 1)
 
 [node name="ParamControl" type="Control" parent="Control" unique_id=504859187]
 layout_mode = 1
@@ -744,7 +745,7 @@ offset_bottom = 690.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_xhtwi")
-color = Color(0.36969033, 0.23906943, 0.63252646, 1)
+color = Color(0.4386159, 0.2534165, 0.47083575, 1)
 
 [node name="VBox" type="VBoxContainer" parent="Control/ChainsControl" unique_id=1282061538]
 custom_minimum_size = Vector2(1030, 646)
