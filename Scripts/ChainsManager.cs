@@ -68,7 +68,7 @@ public partial class ChainsManager : Control
             {Aspect.Spiritus, [Aspect.Victus, Aspect.Mortuus, Aspect.Cognitio, Aspect.Sensus, Aspect.Desidia]},
             {Aspect.Cognitio, [Aspect.Ignis, Aspect.Spiritus, Aspect.Aequalitas, Aspect.Strontio, Aspect.Humanus, Aspect.Vesania]}, // compound-6
             {Aspect.Sensus, [Aspect.Aer, Aspect.Spiritus, Aspect.Invidia]},
-            {Aspect.Alienis, [Aspect.Vacuos, Aspect.Tenebrae]},
+            {Aspect.Alienis, [Aspect.Vacuos, Aspect.Tenebrae, Aspect.Terminus]},
             {Aspect.Gula, [Aspect.Vacuos, Aspect.Fames]},
             {Aspect.Astrum, [Aspect.Lux, Aspect.Primordium]},
             {Aspect.Magneto, [Aspect.Metallum, Aspect.Iter]},
@@ -76,22 +76,26 @@ public partial class ChainsManager : Control
             {Aspect.Strontio, [Aspect.Perditio, Aspect.Cognitio]},
             {Aspect.Corpus, [Aspect.Mortuus, Aspect.Bestia, Aspect.Luxuria]},
             {Aspect.Desidia, [Aspect.Vinculum, Aspect.Spiritus]}, // compound-8
-            {Aspect.Humanus, [Aspect.Bestia, Aspect.Cognitio, Aspect.Instrumentum, Aspect.Perfodio, Aspect.Messis, Aspect.Gloria, Aspect.Lucrum]}, // compound-10
+            {Aspect.Humanus, [Aspect.Bestia, Aspect.Cognitio, Aspect.Instrumentum, Aspect.Perfodio, Aspect.Messis, Aspect.Gloria, Aspect.Lucrum, Aspect.Fabrico]}, // compound-10
             {Aspect.Invidia, [Aspect.Fames, Aspect.Sensus]},
-            {Aspect.Instrumentum, [Aspect.Ordo, Aspect.Humanus, Aspect.Telum, Aspect.Tutamen, Aspect.Machina, Aspect.Pannus]}, // compound-11
-            {Aspect.Perfodio, [Aspect.Terra, Aspect.Humanus]},
+            {Aspect.Instrumentum, [Aspect.Ordo, Aspect.Humanus, Aspect.Telum, Aspect.Tutamen, Aspect.Machina, Aspect.Pannus, Aspect.Fabrico, Aspect.Meto]}, // compound-11
+            {Aspect.Perfodio, [Aspect.Terra, Aspect.Humanus, Aspect.Nebrisum]},
             {Aspect.Luxuria, [Aspect.Fames, Aspect.Corpus]},
             {Aspect.Vesania, [Aspect.Vitium, Aspect.Cognitio]},
             {Aspect.Telum, [Aspect.Ignis, Aspect.Instrumentum, Aspect.Ira]}, // compound-12
             {Aspect.Tutamen, [Aspect.Terra, Aspect.Instrumentum, Aspect.Tabernus]},
             {Aspect.Ira, [Aspect.Ignis, Aspect.Telum]}, // compound-13
             {Aspect.Machina, [Aspect.Motus, Aspect.Instrumentum, Aspect.Electrum]},
-            {Aspect.Messis, [Aspect.Herba, Aspect.Humanus]},
+            {Aspect.Messis, [Aspect.Herba, Aspect.Humanus, Aspect.Meto]},
             {Aspect.Gloria, [Aspect.Iter, Aspect.Humanus]},
-            {Aspect.Lucrum, [Aspect.Fames, Aspect.Humanus]}, // compound-14
+            {Aspect.Lucrum, [Aspect.Fames, Aspect.Humanus, Aspect.Terminus, Aspect.Nebrisum]}, // compound-14
             {Aspect.Electrum, [Aspect.Potentia, Aspect.Machina]}, // compound-15
             {Aspect.Tabernus, [Aspect.Iter, Aspect.Tutamen]},
             {Aspect.Pannus, [Aspect.Bestia, Aspect.Instrumentum]},
+            {Aspect.Terminus, [Aspect.Alienis, Aspect.Lucrum]}, // compound-20
+            {Aspect.Fabrico, [Aspect.Humanus, Aspect.Instrumentum]}, // compound-21
+            {Aspect.Meto, [Aspect.Instrumentum, Aspect.Messis]}, // compound-24
+            {Aspect.Nebrisum, [Aspect.Perfodio, Aspect.Lucrum]}, // compound-25
         }  
     };
 

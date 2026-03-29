@@ -67,5 +67,9 @@ namespace GTNHTC
         Electrum, // compound-15
         Tabernus,
         Pannus,
+        Terminus, // compound-20
+        Fabrico, // compound-21
+        Meto, // compound-24
+        Nebrisum, // compound-25
     }
 }

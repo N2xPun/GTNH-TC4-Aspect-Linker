@@ -70,6 +70,10 @@
 [ext_resource type="Texture2D" uid="uid://cm6cyawqp61gx" path="res://Images/Aspect Icons/Electrum.webp" id="66_iv5a6"]
 [ext_resource type="Texture2D" uid="uid://bxkfawvv5cphb" path="res://Images/Aspect Icons/Tabernus.webp" id="67_qtfp0"]
 [ext_resource type="Texture2D" uid="uid://b41ty0f00u6xd" path="res://Images/Aspect Icons/Pannus.webp" id="68_2vo3a"]
+[ext_resource type="Texture2D" uid="uid://cxw1rn7tw7dxc" path="res://Images/Aspect Icons/Terminus.webp" id="69_5plpr"]
+[ext_resource type="Texture2D" uid="uid://djoated7f16sk" path="res://Images/Aspect Icons/Fabrico.webp" id="70_6s7im"]
+[ext_resource type="Texture2D" uid="uid://28835da40013" path="res://Images/Aspect Icons/Meto.webp" id="71_fd3ka"]
+[ext_resource type="Texture2D" uid="uid://bcarnsfh8ec32" path="res://Images/Aspect Icons/Nebrisum.webp" id="72_p06fb"]
 
 [node name="World" type="Node2D" unique_id=21143700]
 
@@ -167,7 +171,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 65
+item_count = 69
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -363,6 +367,18 @@ popup/item_63/id = 63
 popup/item_64/text = "Pannus"
 popup/item_64/icon = ExtResource("68_2vo3a")
 popup/item_64/id = 64
+popup/item_65/text = "Terminus"
+popup/item_65/icon = ExtResource("69_5plpr")
+popup/item_65/id = 65
+popup/item_66/text = "Fabrico"
+popup/item_66/icon = ExtResource("70_6s7im")
+popup/item_66/id = 66
+popup/item_67/text = "Meto"
+popup/item_67/icon = ExtResource("71_fd3ka")
+popup/item_67/id = 67
+popup/item_68/text = "Nebrisum"
+popup/item_68/icon = ExtResource("72_p06fb")
+popup/item_68/id = 68
 
 [node name="ChainLengthControl" type="Control" parent="Control/ParamControl" unique_id=22472858]
 layout_mode = 1
@@ -478,7 +494,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 65
+item_count = 69
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -674,6 +690,18 @@ popup/item_63/id = 63
 popup/item_64/text = "Pannus"
 popup/item_64/icon = ExtResource("68_2vo3a")
 popup/item_64/id = 64
+popup/item_65/text = "Terminus"
+popup/item_65/icon = ExtResource("69_5plpr")
+popup/item_65/id = 65
+popup/item_66/text = "Fabrico"
+popup/item_66/icon = ExtResource("70_6s7im")
+popup/item_66/id = 66
+popup/item_67/text = "Meto"
+popup/item_67/icon = ExtResource("71_fd3ka")
+popup/item_67/id = 67
+popup/item_68/text = "Nebrisum"
+popup/item_68/icon = ExtResource("72_p06fb")
+popup/item_68/id = 68
 
 [node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("Paginator", "ChainsDisplay", "Starts", "Ends", "LengthSelector", "SortSelector")]
 layout_mode = 1

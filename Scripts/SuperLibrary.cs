@@ -73,6 +73,10 @@ namespace SuperLibrary
             {Aspect.Electrum, "res://Images/Aspect Icons/Electrum.webp"}, // compound-15
             {Aspect.Tabernus, "res://Images/Aspect Icons/Tabernus.webp"},
             {Aspect.Pannus, "res://Images/Aspect Icons/Pannus.webp"},
+            {Aspect.Terminus, "res://Images/Aspect Icons/Terminus.webp"}, // compound-20
+            {Aspect.Fabrico, "res://Images/Aspect Icons/Fabrico.webp"}, // compound-21
+            {Aspect.Meto, "res://Images/Aspect Icons/Meto.webp"}, // compound-24
+            {Aspect.Nebrisum, "res://Images/Aspect Icons/Nebrisum.webp"}, // compound-25
         };
 
         public static readonly Dictionary<Aspect, int> AspComplexity = new()
@@ -142,6 +146,11 @@ namespace SuperLibrary
             {Aspect.Electrum, 15}, // compound-15
             {Aspect.Tabernus, 15},
             {Aspect.Pannus, 15},
+            {Aspect.Terminus, 20}, // compound-20
+            {Aspect.Fabrico, 21}, // compound-21
+            {Aspect.Meto, 24}, // compound-24
+            {Aspect.Nebrisum, 25}, // compound-25
+            
         };
     }
 }
