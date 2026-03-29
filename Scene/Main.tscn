@@ -50,6 +50,16 @@
 [ext_resource type="Texture2D" uid="uid://dby0s5gym6csd" path="res://Images/Aspect Icons/Gula.webp" id="46_6b3h5"]
 [ext_resource type="Texture2D" uid="uid://dkd2dqywv4hgo" path="res://Images/Aspect Icons/Astrum.webp" id="47_qtu3h"]
 [ext_resource type="Texture2D" uid="uid://s2ih8o0qc8mf" path="res://Images/Aspect Icons/Magneto.webp" id="48_ps337"]
+[ext_resource type="Texture2D" uid="uid://cc27xv42hxueo" path="res://Images/Aspect Icons/Aequalitas.webp" id="49_goe3w"]
+[ext_resource type="Texture2D" uid="uid://capbp732g6dxu" path="res://Images/Aspect Icons/Strontio.webp" id="50_vppcx"]
+[ext_resource type="Texture2D" uid="uid://b7d7td2j0e86e" path="res://Images/Aspect Icons/Corpus.webp" id="51_vs8fc"]
+[ext_resource type="Texture2D" uid="uid://dxg58qkjjn1sl" path="res://Images/Aspect Icons/Desidia.webp" id="52_e8kx7"]
+[ext_resource type="Texture2D" uid="uid://bpb3njaanahtw" path="res://Images/Aspect Icons/Humanus.webp" id="53_qke6d"]
+[ext_resource type="Texture2D" uid="uid://jyn7ihgdd2rt" path="res://Images/Aspect Icons/Invidia.webp" id="54_3uymx"]
+[ext_resource type="Texture2D" uid="uid://bnk7jq2y7uqdy" path="res://Images/Aspect Icons/Instrumentum.webp" id="55_qke6d"]
+[ext_resource type="Texture2D" uid="uid://kt26uiebu5tt" path="res://Images/Aspect Icons/Perfodio.webp" id="56_3uymx"]
+[ext_resource type="Texture2D" uid="uid://bpvie0qmsewbn" path="res://Images/Aspect Icons/Luxuria.webp" id="57_qr046"]
+[ext_resource type="Texture2D" uid="uid://v2xvvpku70uf" path="res://Images/Aspect Icons/Vesania.webp" id="58_a8wfw"]
 
 [node name="World" type="Node2D" unique_id=21143700]
 
@@ -147,7 +157,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 45
+item_count = 55
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -283,6 +293,36 @@ popup/item_43/id = 43
 popup/item_44/text = "Magneto"
 popup/item_44/icon = ExtResource("48_ps337")
 popup/item_44/id = 44
+popup/item_45/text = "Aequalitas"
+popup/item_45/icon = ExtResource("49_goe3w")
+popup/item_45/id = 45
+popup/item_46/text = "Strontio"
+popup/item_46/icon = ExtResource("50_vppcx")
+popup/item_46/id = 46
+popup/item_47/text = "Corpus"
+popup/item_47/icon = ExtResource("51_vs8fc")
+popup/item_47/id = 47
+popup/item_48/text = "Desidia"
+popup/item_48/icon = ExtResource("52_e8kx7")
+popup/item_48/id = 48
+popup/item_49/text = "Humanus"
+popup/item_49/icon = ExtResource("53_qke6d")
+popup/item_49/id = 49
+popup/item_50/text = "Invidia"
+popup/item_50/icon = ExtResource("54_3uymx")
+popup/item_50/id = 50
+popup/item_51/text = "Instrumentum"
+popup/item_51/icon = ExtResource("55_qke6d")
+popup/item_51/id = 51
+popup/item_52/text = "Perfodio"
+popup/item_52/icon = ExtResource("56_3uymx")
+popup/item_52/id = 52
+popup/item_53/text = "Luxuria"
+popup/item_53/icon = ExtResource("57_qr046")
+popup/item_53/id = 53
+popup/item_54/text = "Vesania"
+popup/item_54/icon = ExtResource("58_a8wfw")
+popup/item_54/id = 54
 
 [node name="ChainLengthControl" type="Control" parent="Control/ParamControl" unique_id=22472858]
 layout_mode = 1
@@ -398,7 +438,7 @@ theme = ExtResource("1_xhtwi")
 icon = ExtResource("2_g6ejq")
 icon_alignment = 1
 expand_icon = true
-item_count = 45
+item_count = 55
 popup/item_0/text = "Ordo"
 popup/item_0/icon = ExtResource("5_aan6j")
 popup/item_0/id = 0
@@ -534,6 +574,36 @@ popup/item_43/id = 43
 popup/item_44/text = "Magneto"
 popup/item_44/icon = ExtResource("48_ps337")
 popup/item_44/id = 44
+popup/item_45/text = "Aequalitas"
+popup/item_45/icon = ExtResource("49_goe3w")
+popup/item_45/id = 45
+popup/item_46/text = "Strontio"
+popup/item_46/icon = ExtResource("50_vppcx")
+popup/item_46/id = 46
+popup/item_47/text = "Corpus"
+popup/item_47/icon = ExtResource("51_vs8fc")
+popup/item_47/id = 47
+popup/item_48/text = "Desidia"
+popup/item_48/icon = ExtResource("52_e8kx7")
+popup/item_48/id = 48
+popup/item_49/text = "Humanus"
+popup/item_49/icon = ExtResource("53_qke6d")
+popup/item_49/id = 49
+popup/item_50/text = "Invidia"
+popup/item_50/icon = ExtResource("54_3uymx")
+popup/item_50/id = 50
+popup/item_51/text = "Instrumentum"
+popup/item_51/icon = ExtResource("55_qke6d")
+popup/item_51/id = 51
+popup/item_52/text = "Perfodio"
+popup/item_52/icon = ExtResource("56_3uymx")
+popup/item_52/id = 52
+popup/item_53/text = "Luxuria"
+popup/item_53/icon = ExtResource("57_qr046")
+popup/item_53/id = 53
+popup/item_54/text = "Vesania"
+popup/item_54/icon = ExtResource("58_a8wfw")
+popup/item_54/id = 54
 
 [node name="ChainsControl" type="Control" parent="Control" unique_id=1059057359 node_paths=PackedStringArray("Paginator", "ChainsDisplay", "Starts", "Ends", "LengthSelector", "SortSelector")]
 layout_mode = 1

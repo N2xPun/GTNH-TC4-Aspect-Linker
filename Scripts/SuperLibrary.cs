@@ -52,7 +52,17 @@ namespace SuperLibrary
             {Aspectus.Alienis, "res://Images/Aspect Icons/Alienis.webp"},
             {Aspectus.Gula, "res://Images/Aspect Icons/Gula.webp"},
             {Aspectus.Astrum, "res://Images/Aspect Icons/Astrum.webp"},
-            {Aspectus.Magneto, "res://Images/Aspect Icons/Magneto.webp"}, 
+            {Aspectus.Magneto, "res://Images/Aspect Icons/Magneto.webp"},
+            {Aspectus.Aequalitas, "res://Images/Aspect Icons/Aequalitas.webp"}, // compound-7
+            {Aspectus.Strontio, "res://Images/Aspect Icons/Strontio.webp"}, 
+            {Aspectus.Corpus, "res://Images/Aspect Icons/Corpus.webp"},
+            {Aspectus.Desidia, "res://Images/Aspect Icons/Desidia.webp"}, // compound-8
+            {Aspectus.Humanus, "res://Images/Aspect Icons/Humanus.webp"}, // compound-10
+            {Aspectus.Invidia, "res://Images/Aspect Icons/Invidia.webp"},
+            {Aspectus.Instrumentum, "res://Images/Aspect Icons/Instrumentum.webp"}, // compound-11
+            {Aspectus.Perfodio, "res://Images/Aspect Icons/Perfodio.webp"},
+            {Aspectus.Luxuria, "res://Images/Aspect Icons/Luxuria.webp"},
+            {Aspectus.Vesania, "res://Images/Aspect Icons/Vesania.webp"},
         };
 
         public static readonly Dictionary<Aspectus, int> AspComplexity = new()
@@ -102,6 +112,16 @@ namespace SuperLibrary
             {Aspectus.Gula, 6},
             {Aspectus.Astrum, 6},
             {Aspectus.Magneto, 6}, 
+            {Aspectus.Aequalitas, 7}, // compound-7
+            {Aspectus.Strontio, 7}, 
+            {Aspectus.Corpus, 7},
+            {Aspectus.Desidia, 8}, // compound-8
+            {Aspectus.Humanus, 10}, // compound-10
+            {Aspectus.Invidia, 10},
+            {Aspectus.Instrumentum, 11}, // compound-11
+            {Aspectus.Perfodio, 11},
+            {Aspectus.Luxuria, 11},
+            {Aspectus.Vesania, 11},
         };
     }
 }

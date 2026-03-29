@@ -47,6 +47,15 @@ namespace GTNHTC
         Gula,
         Astrum,
         Magneto,
-        
+        Aequalitas, // compound-7
+        Strontio,
+        Corpus,
+        Desidia, // compound-8
+        Humanus, // compound-10
+        Invidia,
+        Instrumentum, // compound-11
+        Perfodio,
+        Luxuria,
+        Vesania,
     }
 }

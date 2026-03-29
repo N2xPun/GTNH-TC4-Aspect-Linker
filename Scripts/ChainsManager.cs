@@ -28,11 +28,11 @@ public partial class ChainsManager : Control
     {
         EdgesList =
         {
-            {Aspectus.Ordo, [Aspectus.Permutatio, Aspectus.Potentia, Aspectus.Vitreus, Aspectus.Motus, Aspectus.Tempus, Aspectus.Sano]}, // primal-1
-            {Aspectus.Perditio, [Aspectus.Permutatio, Aspectus.Venenum, Aspectus.Gelum, Aspectus.Vacuos, Aspectus.Vinculum, Aspectus.Mortuus, Aspectus.Vitium]},
+            {Aspectus.Ordo, [Aspectus.Permutatio, Aspectus.Potentia, Aspectus.Vitreus, Aspectus.Motus, Aspectus.Tempus, Aspectus.Sano, Aspectus.Aequalitas, Aspectus.Instrumentum]}, // primal-1
+            {Aspectus.Perditio, [Aspectus.Permutatio, Aspectus.Venenum, Aspectus.Gelum, Aspectus.Vacuos, Aspectus.Vinculum, Aspectus.Mortuus, Aspectus.Vitium, Aspectus.Strontio]},
             {Aspectus.Aqua, [Aspectus.Venenum, Aspectus.Victus, Aspectus.Tempestas, Aspectus.Limus]},
             {Aspectus.Ignis, [Aspectus.Potentia, Aspectus.Gelum, Aspectus.Lux, Aspectus.Infernus, Aspectus.Cognitio]},
-            {Aspectus.Terra, [Aspectus.Vitreus, Aspectus.Victus, Aspectus.Metallum, Aspectus.Iter, Aspectus.Herba]},
+            {Aspectus.Terra, [Aspectus.Vitreus, Aspectus.Victus, Aspectus.Metallum, Aspectus.Iter, Aspectus.Herba, Aspectus.Perfodio]},
             {Aspectus.Aer, [Aspectus.Motus, Aspectus.Vacuos, Aspectus.Tempestas, Aspectus.Lux, Aspectus.Volatus, Aspectus.Arbor, Aspectus.Auram, Aspectus.Sensus]},
             {Aspectus.Permutatio, [Aspectus.Ordo, Aspectus.Perditio]}, // compound-2
             {Aspectus.Potentia, [Aspectus.Ordo, Aspectus.Ignis, Aspectus.Praecantatio, Aspectus.Radio]},
@@ -46,8 +46,8 @@ public partial class ChainsManager : Control
             {Aspectus.Lux, [Aspectus.Ignis, Aspectus.Aer, Aspectus.Radio, Aspectus.Tenebrae, Aspectus.Astrum]},
             {Aspectus.Tempus, [Aspectus.Ordo, Aspectus.Vacuos]}, // compound-3
             {Aspectus.Sano, [Aspectus.Ordo, Aspectus.Victus]},
-            {Aspectus.Vinculum, [Aspectus.Perditio, Aspectus.Motus]},
-            {Aspectus.Mortuus, [Aspectus.Perditio, Aspectus.Victus, Aspectus.Exanimis, Aspectus.Spiritus]},
+            {Aspectus.Vinculum, [Aspectus.Perditio, Aspectus.Motus, Aspectus.Desidia]},
+            {Aspectus.Mortuus, [Aspectus.Perditio, Aspectus.Victus, Aspectus.Exanimis, Aspectus.Spiritus, Aspectus.Corpus]},
             {Aspectus.Limus, [Aspectus.Aqua, Aspectus.Victus]},
             {Aspectus.Metallum, [Aspectus.Terra, Aspectus.Vitreus, Aspectus.Caelum, Aspectus.Magneto]},
             {Aspectus.Iter, [Aspectus.Terra, Aspectus.Motus, Aspectus.Magneto]},
@@ -56,23 +56,33 @@ public partial class ChainsManager : Control
             {Aspectus.Arbor, [Aspectus.Aer, Aspectus.Herba]},
             {Aspectus.Praecantatio, [Aspectus.Potentia, Aspectus.Vacuos, Aspectus.Vitium, Aspectus.Infernus, Aspectus.Auram]},
             {Aspectus.Radio, [Aspectus.Potentia, Aspectus.Lux]},
-            {Aspectus.Bestia, [Aspectus.Motus, Aspectus.Victus]},
+            {Aspectus.Bestia, [Aspectus.Motus, Aspectus.Victus, Aspectus.Corpus, Aspectus.Humanus]},
             {Aspectus.Primordium, [Aspectus.Motus, Aspectus.Vacuos, Aspectus.Astrum]},
             {Aspectus.Tenebrae, [Aspectus.Vacuos, Aspectus.Lux, Aspectus.Alienis]},
-            {Aspectus.Fames, [Aspectus.Vacuos, Aspectus.Victus, Aspectus.Gula]},
-            {Aspectus.Vitium, [Aspectus.Perditio, Aspectus.Praecantatio]}, // compound-5
+            {Aspectus.Fames, [Aspectus.Vacuos, Aspectus.Victus, Aspectus.Gula, Aspectus.Invidia, Aspectus.Luxuria]},
+            {Aspectus.Vitium, [Aspectus.Perditio, Aspectus.Praecantatio, Aspectus.Vesania]}, // compound-5
             {Aspectus.Infernus, [Aspectus.Ignis, Aspectus.Praecantatio]},
             {Aspectus.Auram, [Aspectus.Aer, Aspectus.Praecantatio]},
             {Aspectus.Caelum, [Aspectus.Vitreus, Aspectus.Metallum]},
             {Aspectus.Exanimis, [Aspectus.Motus, Aspectus.Mortuus]},
             {Aspectus.Superbia, [Aspectus.Vacuos, Aspectus.Volatus]},
-            {Aspectus.Spiritus, [Aspectus.Victus, Aspectus.Mortuus, Aspectus.Cognitio, Aspectus.Sensus]},
-            {Aspectus.Cognitio, [Aspectus.Ignis, Aspectus.Spiritus]}, // compound-6
-            {Aspectus.Sensus, [Aspectus.Aer, Aspectus.Spiritus]},
+            {Aspectus.Spiritus, [Aspectus.Victus, Aspectus.Mortuus, Aspectus.Cognitio, Aspectus.Sensus, Aspectus.Desidia]},
+            {Aspectus.Cognitio, [Aspectus.Ignis, Aspectus.Spiritus, Aspectus.Aequalitas, Aspectus.Strontio, Aspectus.Humanus, Aspectus.Vesania]}, // compound-6
+            {Aspectus.Sensus, [Aspectus.Aer, Aspectus.Spiritus, Aspectus.Invidia]},
             {Aspectus.Alienis, [Aspectus.Vacuos, Aspectus.Tenebrae]},
             {Aspectus.Gula, [Aspectus.Vacuos, Aspectus.Fames]},
             {Aspectus.Astrum, [Aspectus.Lux, Aspectus.Primordium]},
             {Aspectus.Magneto, [Aspectus.Metallum, Aspectus.Iter]},
+            {Aspectus.Aequalitas, [Aspectus.Ordo, Aspectus.Cognitio]}, // compound-7
+            {Aspectus.Strontio, [Aspectus.Perditio, Aspectus.Cognitio]},
+            {Aspectus.Corpus, [Aspectus.Mortuus, Aspectus.Bestia, Aspectus.Luxuria]},
+            {Aspectus.Desidia, [Aspectus.Vinculum, Aspectus.Spiritus]}, // compound-8
+            {Aspectus.Humanus, [Aspectus.Bestia, Aspectus.Cognitio, Aspectus.Instrumentum, Aspectus.Perfodio]}, // compound-10
+            {Aspectus.Invidia, [Aspectus.Fames, Aspectus.Sensus]},
+            {Aspectus.Instrumentum, [Aspectus.Ordo, Aspectus.Humanus]}, // compound-11
+            {Aspectus.Perfodio, [Aspectus.Terra, Aspectus.Humanus]},
+            {Aspectus.Luxuria, [Aspectus.Fames, Aspectus.Corpus]},
+            {Aspectus.Vesania, [Aspectus.Vitium, Aspectus.Cognitio]},
         }  
     };
 
