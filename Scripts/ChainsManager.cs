@@ -1,6 +1,7 @@
 using Godot;
 using GTNHTC;
 using SuperLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -146,6 +147,12 @@ public partial class ChainsManager : Control
         }
     }
 
+    private static int ChainEntropyComparer(List<Aspect> x, List<Aspect> y)
+    {
+        double ex = ChainEntropy(x), ey = ChainEntropy(y);
+        return Math.Abs(ex - ey) < 1e-12 ? 0 : ex - ey > 1e-12 ? 1 : -1;
+    }
+
     private static Dictionary<Aspect, int> ChainAspectFrequency(List<Aspect> x)
     {
         Dictionary<Aspect, int> freq = [];
@@ -157,6 +164,17 @@ public partial class ChainsManager : Control
             }
         }
         return freq;
+    }
+
+    private static double ChainEntropy(List<Aspect> x)
+    {
+        Dictionary<Aspect, int> fx = ChainAspectFrequency(x);
+        double ent = 0;
+        foreach ((_, int fi) in fx)
+        {
+            ent -= (double)fi / x.Count * Math.Log2(fi);
+        }
+        return ent;
     }
 
     private static int ChainSimpleUniqueComparer(List<Aspect> x, List<Aspect> y)
@@ -186,6 +204,10 @@ public partial class ChainsManager : Control
                 break;
             case 2:
                 _chains.Sort(ChainSimpleUniqueComparer);
+                DisplayChains();
+                break;
+            case 3:
+                _chains.Sort(ChainEntropyComparer);
                 DisplayChains();
                 break;
             default:

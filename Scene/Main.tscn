@@ -439,13 +439,15 @@ offset_bottom = 82.0
 grow_horizontal = 2
 grow_vertical = 2
 selected = 0
-item_count = 3
+item_count = 4
 popup/item_0/text = "Unique"
 popup/item_0/id = 0
 popup/item_1/text = "Complexity"
 popup/item_1/id = 1
 popup/item_2/text = "Unique & Simple"
 popup/item_2/id = 2
+popup/item_3/text = "Entropy"
+popup/item_3/id = 3
 
 [node name="EndAspectsControl" type="Control" parent="Control/ParamControl" unique_id=533567620]
 layout_mode = 1
